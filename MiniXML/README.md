@@ -1,3 +1,4 @@
+# Use GCC or Android NDK to install MiniXML source code into a library using CMake by Meatlf
 # Mini-XML Version 3.0
 
 Mini-XML is a small XML parsing library that you can use to read XML data files
