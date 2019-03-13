@@ -1,5 +1,7 @@
-run : main.o 
-	cc -o run main.o
-main.o : main.c 
+objects = main.o
+
+run : $(objects) 
+	cc -o run $(objects)
+.PHONY : clean
 clean:
-	rm run main.o
+	-rm run $(objects)
