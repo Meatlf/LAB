@@ -3,10 +3,14 @@
 int main(){
 	FILE* fp;
 	mxml_node_t *tree,*node;
-	
+	printf("HelloWorld!\n");	
 	fp = fopen("info.xml", "r");
+	if(NULL == fp){
+		printf("Cannot find info.xml\n");
+		return -1;
+	}
 	tree = mxmlLoadFile(NULL, fp,
-			MXML_OPAQUE_CALLBACK);
+			MXML_NO_CALLBACK);
 	node = mxmlFindElement(tree, tree, "to", NULL, NULL,MXML_DESCEND);
        if(node == NULL)
        {

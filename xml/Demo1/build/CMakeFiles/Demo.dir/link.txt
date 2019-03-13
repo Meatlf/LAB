@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/Demo.dir/helloworld.cc.o  -o Demo 
+/usr/bin/c++      CMakeFiles/Demo.dir/helloworld.cc.o  -o Demo -rdynamic 
