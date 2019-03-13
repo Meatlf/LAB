@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libmxml.so -o libmxml.so CMakeFiles/mxml.dir/mxml-attr.c.o CMakeFiles/mxml.dir/mxml-entity.c.o CMakeFiles/mxml.dir/mxml-file.c.o CMakeFiles/mxml.dir/mxml-get.c.o CMakeFiles/mxml.dir/mxml-node.c.o CMakeFiles/mxml.dir/mxml-private.c.o CMakeFiles/mxml.dir/mxml-set.c.o CMakeFiles/mxml.dir/mxml-string.c.o 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmxml_static.a  CMakeFiles/mxml_static.dir/mxml-attr.c.o CMakeFiles/mxml_static.dir/mxml-entity.c.o CMakeFiles/mxml_static.dir/mxml-file.c.o CMakeFiles/mxml_static.dir/mxml-get.c.o CMakeFiles/mxml_static.dir/mxml-node.c.o CMakeFiles/mxml_static.dir/mxml-private.c.o CMakeFiles/mxml_static.dir/mxml-set.c.o CMakeFiles/mxml_static.dir/mxml-string.c.o
+/usr/bin/ranlib libmxml_static.a
