@@ -1,7 +1,0 @@
-/home/ttz/Documents/LAB/xml/Demo2/build/CMakeFiles/edit_cache.dir
-/home/ttz/Documents/LAB/xml/Demo2/build/CMakeFiles/rebuild_cache.dir
-/home/ttz/Documents/LAB/xml/Demo2/build/CMakeFiles/Demo.dir
-/home/ttz/Documents/LAB/xml/Demo2/build/lib/CMakeFiles/rebuild_cache.dir
-/home/ttz/Documents/LAB/xml/Demo2/build/lib/CMakeFiles/edit_cache.dir
-/home/ttz/Documents/LAB/xml/Demo2/build/lib/CMakeFiles/mxml_static.dir
-/home/ttz/Documents/LAB/xml/Demo2/build/lib/CMakeFiles/mxml.dir

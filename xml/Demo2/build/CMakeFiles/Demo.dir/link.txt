@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/Demo.dir/main.cc.o  -o Demo -rdynamic lib/libmxml.so -Wl,-rpath,/home/ttz/Documents/LAB/xml/Demo2/build/lib 
