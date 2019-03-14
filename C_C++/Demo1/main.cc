@@ -1,9 +1,12 @@
 #include<stdio.h>
-#include<sys/time.h>
+ #include<sys/time.h>
 
-void sleep(int a){
-	for(int i=0; i < a; i++)
-		i;
+void sleep(long n){
+	int a=0;
+	for(long i=0; i < n; i++) {
+		a++;
+		printf("%d",a);
+	}
 }
 
 void test_time(){
@@ -15,7 +18,7 @@ void test_time(){
 	struct timeval tpstart, tpend;
 	double timeuse;
 	gettimeofday(&tpstart,NULL);
-	sleep(1000000000);
+	sleep(40);
 	gettimeofday(&tpend,NULL);
 	timeuse=1000000 * (tpend.tv_sec - tpstart.tv_sec) 
 		+ tpend.tv_usec - tpstart.tv_usec;

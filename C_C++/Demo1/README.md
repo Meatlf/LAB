@@ -1,1 +1,1 @@
-## Time function on Linux platform
+## Time function on Linux platform and Android platform
