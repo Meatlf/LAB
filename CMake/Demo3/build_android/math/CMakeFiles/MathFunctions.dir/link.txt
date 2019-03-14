@@ -1,0 +1,2 @@
+/usr/ndk/android-ndk-r18b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ar qc libMathFunctions.a  CMakeFiles/MathFunctions.dir/MathFunctions.cc.o
+/usr/ndk/android-ndk-r18b/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64/bin/aarch64-linux-android-ranlib libMathFunctions.a
