@@ -1,5 +1,5 @@
 mkdir build
 cd build
 cmake ..
-make
-./Demo 2 3
+make 
+./Demo 3 2
