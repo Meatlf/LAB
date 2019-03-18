@@ -1,12 +1,11 @@
-cd src/function/math
+cd ./math
+mkdir build
+cd build
+cmake ..
+make
+cd ../../
 mkdir build
 cd build
 cmake ..
 make
 
-cd ../../../../
-mkdir build
-cd build
-cmake ..
-make 
-./Demo 

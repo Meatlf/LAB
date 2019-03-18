@@ -1,3 +1,6 @@
+cd src/function/math
+rm -rf build
+cd ../../../
 rm -rf build
 #rm CMakeCache.txt
 #rm -rf CMakeFiles
