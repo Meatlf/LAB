@@ -1,1 +1,1 @@
-## Only generate library
+## Only generated library
