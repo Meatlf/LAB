@@ -13,5 +13,13 @@ add_subdirectory(src)
 
 # 指定生成目标
 add_executable(Demo ${DIR_SRCS})
-target_link_libraries(Demo Functions MathFunctions)
+find_library(MathFunctions_Libraries libMathFunctions.a /home/ttz/Documents/LAB/CMake/Demo3.4/src/function/math/build)
+
+IF(NOT  MathFunctions_Libraries)
+    message(FATAL_ERROR "lib MathFunctions not found")
+ELSE(MathFunctions_Libraries)
+    message(STATUS "Congratulations, lib MathFunctions  found")
+ENDIF(NOT MathFunctions_Libraries)
+
+target_link_libraries(Demo Functions ${MathFunctions_Libraries})
 

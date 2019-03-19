@@ -1,6 +1,0 @@
-/home/ttz/Documents/LAB/xml/Demo2/build_android/CMakeFiles/rebuild_cache.dir
-/home/ttz/Documents/LAB/xml/Demo2/build_android/CMakeFiles/Demo.dir
-/home/ttz/Documents/LAB/xml/Demo2/build_android/CMakeFiles/edit_cache.dir
-/home/ttz/Documents/LAB/xml/Demo2/build_android/lib/CMakeFiles/rebuild_cache.dir
-/home/ttz/Documents/LAB/xml/Demo2/build_android/lib/CMakeFiles/mxml.dir
-/home/ttz/Documents/LAB/xml/Demo2/build_android/lib/CMakeFiles/edit_cache.dir

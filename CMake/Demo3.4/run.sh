@@ -9,4 +9,4 @@ mkdir build
 cd build
 cmake ..
 make 
-./Demo 
+./Demo 3 2
