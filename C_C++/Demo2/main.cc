@@ -1,24 +1,33 @@
-#include <stdio.h>
+#include<stdio.h>
+ #include<sys/time.h>
 
-int main(void)
-{
-	char buffer[200], s[] = "HelloWorld!", c = 'l';
-	int i = 35, j;
-	float fp = 1.7320534f;
-	// Format and print various data:
-#ifdef _WIN32
-	j = sprintf_s(buffer, sizeof(buffer), "A%s\n", s);
-	j += sprintf_s(buffer + j, sizeof(buffer)- j, " C%c\n", c);
-	j += sprintf_s(buffer + j, sizeof(buffer)- j, " Integer: %d\n", i);
-	j += sprintf_s(buffer + j, sizeof(buffer)- j, " Real: %f\n", fp);
-	printf_s("Output:\n%s\ncharacter count = %d\n", buffer, j);
-#endif
+void sleep(long n){
+	int a=0;
+	for(long i=0; i < n; i++) {
+		a++;
+		printf("%d",a);
+	}
+}
 
-#ifdef linux
-	j=snprintf(buffer, sizeof(buffer), "%s\n", s); 
-    	printf("%sn\n",buffer);
-	printf("%d\n",j);
-#endif
-	printf("Done!\n");
+void test_time(){
+	
+	//struct timeval {
+	//long tv_sec;	/* seconds */
+	//long tv_usec; /* and microseconds */
+	//};
+	struct timeval tpstart, tpend;
+	double timeuse;
+	gettimeofday(&tpstart,NULL);
+	sleep(40);
+	gettimeofday(&tpend,NULL);
+	timeuse=1000000 * (tpend.tv_sec - tpstart.tv_sec) 
+		+ tpend.tv_usec - tpstart.tv_usec;
+	printf("Used time:%fus\n", timeuse);
+}
+
+int main(int argc,char* argv[]){
+	printf("Begin!\n");
+	test_time();
+	printf("End!\n");
 	return 0;
 }
