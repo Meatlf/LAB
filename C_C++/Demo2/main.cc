@@ -1,5 +1,4 @@
 #include <stdio.h>
-//#define linux
 
 int main(void)
 {

@@ -1,1 +1,2 @@
-## Time function on Linux platform and Android platform
+## Time function ```gettimeofday``` on Linux platform or Android platform
+
