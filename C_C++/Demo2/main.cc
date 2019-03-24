@@ -5,8 +5,9 @@ void sleep(long n){
 	int a=0;
 	for(long i=0; i < n; i++) {
 		a++;
-		printf("%d",a);
+		printf("%d ",a);
 	}
+	printf("\n");
 }
 
 void test_time(){
