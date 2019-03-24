@@ -1,5 +1,8 @@
 #include<stdio.h>
- #include<sys/time.h>
+#include<sys/time.h>
+
+#define TIME_BEGIN struct timeval tpstart, tpend; double timeuse; gettimeofday(&tpstart,NULL);
+#define TIME_END gettimeofday(&tpend,NULL); timeuse=1000000 * (tpend.tv_sec - tpstart.tv_sec) + tpend.tv_usec - tpstart.tv_usec;
 
 void sleep(long n){
 	int a=0;
@@ -11,18 +14,9 @@ void sleep(long n){
 }
 
 void test_time(){
-	
-	//struct timeval {
-	//long tv_sec;	/* seconds */
-	//long tv_usec; /* and microseconds */
-	//};
-	struct timeval tpstart, tpend;
-	double timeuse;
-	gettimeofday(&tpstart,NULL);
+	TIME_BEGIN
 	sleep(40);
-	gettimeofday(&tpend,NULL);
-	timeuse=1000000 * (tpend.tv_sec - tpstart.tv_sec) 
-		+ tpend.tv_usec - tpstart.tv_usec;
+	TIME_END
 	printf("Used time:%fus\n", timeuse);
 }
 
