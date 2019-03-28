@@ -1,1 +1,1 @@
-add_subdirectory(function)
+add_subdirectory(function algroithm)

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "inc/MathFunctions.h"
 #include "inc/fun.h"
+#include "inc/add.h"
 
 int main(int argc, char *argv[])
 {
@@ -15,5 +16,6 @@ int main(int argc, char *argv[])
     printf("%g ^ %d is %g\n", base, exponent, result);
     double result1 = function(base,exponent);
     printf("%g ^ %d is %g\n", base, exponent, result1);
+    printf("add(3,4) = %d\n", add(3,4));
     return 0;
 }

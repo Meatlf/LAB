@@ -4,6 +4,13 @@
 ## References
 [CMake by Example](https://mirkokiefer.com/cmake-by-example-f95eb47d45b1)
 
+## Libraries structure
+```
+main.cc
+   ├── Functions 
+   └── Add     └── MathFunctions
+```
+
 ## Dircetories
 
 ```
@@ -11,12 +18,16 @@
 ├── clean.sh
 ├── CMakeLists.txt
 ├── inc
+│   ├── add.h
 │   ├── fun.h
 │   └── MathFunctions.h
 ├── main.cc
 ├── README.md
 ├── run.sh
 └── src
+    ├── algroithm
+    │   ├── add.cc
+    │   └── CMakeLists.txt
     ├── CMakeLists.txt
     └── function
         ├── build.sh
@@ -28,4 +39,5 @@
             ├── CMakeLists.txt
             └── MathFunctions.cc
 
-4 directories, 15 files```
+5 directories, 18 files
+```
