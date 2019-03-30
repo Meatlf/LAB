@@ -1,1 +1,1 @@
-## Same directory, multiple source files
+## Multiple source files are in the same files directory.

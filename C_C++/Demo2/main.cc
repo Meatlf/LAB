@@ -1,25 +1,28 @@
-#include <stdio.h>
-//#define linux
+#include<stdio.h>
+#include<sys/time.h>
 
-int main(void)
-{
-	char buffer[200], s[] = "HelloWorld!", c = 'l';
-	int i = 35, j;
-	float fp = 1.7320534f;
-	// Format and print various data:
-#ifdef _WIN32
-	j = sprintf_s(buffer, sizeof(buffer), "A%s\n", s);
-	j += sprintf_s(buffer + j, sizeof(buffer)- j, " C%c\n", c);
-	j += sprintf_s(buffer + j, sizeof(buffer)- j, " Integer: %d\n", i);
-	j += sprintf_s(buffer + j, sizeof(buffer)- j, " Real: %f\n", fp);
-	printf_s("Output:\n%s\ncharacter count = %d\n", buffer, j);
-#endif
+#define TIME_BEGIN(begin,end) struct timeval begin, end; double timeuse; gettimeofday(&begin,NULL);
+#define TIME_END(begin,end) gettimeofday(&end,NULL); timeuse=1000000 * (end.tv_sec - begin.tv_sec) + end.tv_usec - begin.tv_usec;
 
-#ifdef linux
-	j=snprintf(buffer, sizeof(buffer), "%s\n", s); 
-    	printf("%sn\n",buffer);
-	printf("%d\n",j);
-#endif
-	printf("Done!\n");
+void sleep(long n){
+	int a=0;
+	for(long i=0; i < n; i++) {
+		a++;
+		printf("%d ",a);
+	}
+	printf("\n");
+}
+
+void test_time(){
+	TIME_BEGIN(begin,end)
+	sleep(40);
+	TIME_END(begin,end)
+	printf("Used time:%fus\n", timeuse);
+}
+
+int main(int argc,char* argv[]){
+	printf("Begin!\n");
+	test_time();
+	printf("End!\n");
 	return 0;
 }
