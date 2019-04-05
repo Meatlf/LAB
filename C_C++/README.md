@@ -5,6 +5,7 @@
 
 ## Demo3
 ### ```sprintf_s``` or ```snprintf``` on  on Linux platform or Android platform. 
-
+### References
+    [sprintf_s](https://baike.baidu.com/item/sprintf_s)
 ## Demo4
 ### 
