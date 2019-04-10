@@ -430,16 +430,6 @@
 //}
 
 
-//#include "Core.h"
-//
-//using namespace std;
-//
-//int main()
-//{
-//	Core::PictureCopy();
-//	return 0;
-//}
-
 //#include <opencv2/opencv.hpp>
 //#include <iostream>
 //using namespace std;
@@ -499,5 +489,6 @@ int main(int argc, char **argv)
 {
 	
 	Core::HelloWorld();
+	Core::PictureCopy();
 	return 0;
 }

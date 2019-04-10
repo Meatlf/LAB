@@ -3,7 +3,7 @@
 
 namespace Core {
 	int HelloWorld();
-	void PictureCopy();
+	int PictureCopy();
 }
 
 #endif

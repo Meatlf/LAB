@@ -15,13 +15,14 @@ namespace Core {
 		cv::waitKey();
 	}
 
-	void PictureCopy() {
+	int PictureCopy() {
 		// read
-		cv::Mat src = cv::imread("lena.jpg", 1);
+		cv::Mat src = cv::imread("../data/input/lena.jpg", 1);
 
 		if (!src.data)
 		{
 			printf("Can't open picture!\n");
+			return -1;
 		}
 		FILE *fp;
 
@@ -50,7 +51,7 @@ namespace Core {
 		}
 
 		// write
-		fp = fopen("./data/output/DstLena.bin", "wb");
+		fp = fopen("../data/output/DstLena.bin", "wb");
 		fwrite(dst_data, sizeof(char), WIDTH * 3 * HEIGHT, fp);
 		cv::waitKey(0);
 		src.release();
