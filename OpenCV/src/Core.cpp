@@ -5,7 +5,7 @@
 namespace Core {
 	void PictureCopy() {
 		// read
-		cv::Mat src = cv::imread("./data/input/lena.jpg", 1);
+		cv::Mat src = cv::imread("lena.jpg", 1);
 
 		if (!src.data)
 		{
