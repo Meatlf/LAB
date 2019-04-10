@@ -493,23 +493,11 @@
 //	return 0;
 //}
 
-#include <opencv2/opencv.hpp>
-#include <iostream>
-
-using namespace std;
-using namespace cv;
+#include"Core.h"
 
 int main(int argc, char **argv)
 {
-	Mat img = imread("../data/input/lena.jpg");
-	if (img.empty())
-	{
-		cout << "´ò¿ªÍ¼ÏñÊ§°Ü£¡" << endl;
-		return -1;
-	}
-	namedWindow("image", CV_WINDOW_AUTOSIZE);
-	imshow("image", img);
-	waitKey();
-
+	
+	Core::HelloWorld();
 	return 0;
 }

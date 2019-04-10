@@ -3,6 +3,18 @@
 #include"Core.h"
 
 namespace Core {
+	int HelloWorld() {
+		cv::Mat img = cv::imread("../data/input/lena.jpg");
+		if (img.empty())
+		{
+			std::cout << "´ò¿ªÍ¼ÏñÊ§°Ü£¡" << std::endl;
+			return -1;
+		}
+		cv::namedWindow("image", CV_WINDOW_AUTOSIZE);
+		cv::imshow("image", img);
+		cv::waitKey();
+	}
+
 	void PictureCopy() {
 		// read
 		cv::Mat src = cv::imread("lena.jpg", 1);

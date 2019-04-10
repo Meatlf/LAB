@@ -2,6 +2,7 @@
 #define _CORE_H
 
 namespace Core {
+	int HelloWorld();
 	void PictureCopy();
 }
 
