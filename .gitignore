@@ -1,1 +1,3 @@
 .vscode*
+*.opendb
+Pytorch/tensor_tutorial.ipynb
