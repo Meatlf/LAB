@@ -1,3 +1,16 @@
 .vscode*
 *.opendb
+*.sln
+*.db
+*.suo
+*.vcxproj.*
+*.vcxproj
+*.ipch
+*.exe
+*.ilk
+*.log
+*.obj
+*.idb
+*.pdb
+*.tlog
 Pytorch/tensor_tutorial.ipynb
