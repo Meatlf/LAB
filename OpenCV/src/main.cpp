@@ -484,11 +484,12 @@
 //}
 
 #include"Core.h"
+#include"ImgProc.h"
 
 int main(int argc, char **argv)
 {
-	
-	Core::HelloWorld();
-	Core::PictureCopy();
+	//Core::HelloWorld();
+	//Core::PictureCopy();
+	ImgProc::GaussianFilter();
 	return 0;
 }
