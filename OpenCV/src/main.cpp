@@ -490,6 +490,7 @@ int main(int argc, char **argv)
 {
 	//Core::HelloWorld();
 	//Core::PictureCopy();
-	ImgProc::GaussianFilter();
+	//ImgProc::GaussianFilter();
+	ImgProc::Canny();
 	return 0;
 }

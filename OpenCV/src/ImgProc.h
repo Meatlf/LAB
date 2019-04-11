@@ -3,6 +3,7 @@
 
 namespace ImgProc {
 	int GaussianFilter();
+	int Canny();
 }
 
 #endif
