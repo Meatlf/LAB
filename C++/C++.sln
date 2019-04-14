@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThisPointer", "ThisPointer\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OverloadedOperator", "OverloadedOperator\OverloadedOperator.vcxproj", "{A58BECC3-45B1-4137-9907-3E8D056CE361}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "C++Interview", "C++Interview\C++Interview.vcxproj", "{90E9C83C-4E03-475E-95D9-254B15874437}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{A58BECC3-45B1-4137-9907-3E8D056CE361}.Release|x64.Build.0 = Release|x64
 		{A58BECC3-45B1-4137-9907-3E8D056CE361}.Release|x86.ActiveCfg = Release|Win32
 		{A58BECC3-45B1-4137-9907-3E8D056CE361}.Release|x86.Build.0 = Release|Win32
+		{90E9C83C-4E03-475E-95D9-254B15874437}.Debug|x64.ActiveCfg = Debug|x64
+		{90E9C83C-4E03-475E-95D9-254B15874437}.Debug|x64.Build.0 = Debug|x64
+		{90E9C83C-4E03-475E-95D9-254B15874437}.Debug|x86.ActiveCfg = Debug|Win32
+		{90E9C83C-4E03-475E-95D9-254B15874437}.Debug|x86.Build.0 = Debug|Win32
+		{90E9C83C-4E03-475E-95D9-254B15874437}.Release|x64.ActiveCfg = Release|x64
+		{90E9C83C-4E03-475E-95D9-254B15874437}.Release|x64.Build.0 = Release|x64
+		{90E9C83C-4E03-475E-95D9-254B15874437}.Release|x86.ActiveCfg = Release|Win32
+		{90E9C83C-4E03-475E-95D9-254B15874437}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

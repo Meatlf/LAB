@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D4EB331E-D496-4F50-BF46-42AE861AB712}</ProjectGuid>
-    <RootNamespace>CopyConstructor</RootNamespace>
+    <ProjectGuid>{90E9C83C-4E03-475E-95D9-254B15874437}</ProjectGuid>
+    <RootNamespace>CInterview</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -122,7 +122,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="diff_class_and_struct.cc" />
+    <ClCompile Include="diff_class_and_struct.h" />
     <ClCompile Include="main.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="head.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
