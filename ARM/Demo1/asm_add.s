@@ -1,7 +1,7 @@
 /*
  * asm_add.s
  *
- *  Created on: 2019Äê4ÔÂ15ÈÕ
+ *  Created on: 2019ï¿½ï¿½4ï¿½ï¿½15ï¿½ï¿½
  *      Author: tztang
  */
 
@@ -10,5 +10,5 @@
 .global asm_add
 
 asm_add:
-	ADD W0, W1, W1
+	ADD W0, W0, W1
 	RET
