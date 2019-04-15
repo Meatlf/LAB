@@ -1,9 +1,7 @@
 *.ipch
 *.bin
-*.vcxproj
 *.db
 *.cmake
-*.filters
 *.log
 *.exe
 *.obj
@@ -15,5 +13,4 @@
 *.list
 *.ilk
 cmake*
-*.sln
 *.suo
