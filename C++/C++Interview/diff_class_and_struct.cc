@@ -1,3 +1,4 @@
+#include<iostream>
 #include"diff_class_and_struct.h"
 
 CPoint::CPoint(int x, int y)

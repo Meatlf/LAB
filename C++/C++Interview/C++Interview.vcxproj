@@ -127,7 +127,11 @@
     <ClCompile Include="main.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="constructor_explicit.h" />
+    <ClInclude Include="explicit_constructor_effect.h" />
+    <ClInclude Include="global_object.h" />
     <ClInclude Include="head.h" />
+    <ClInclude Include="static_memory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

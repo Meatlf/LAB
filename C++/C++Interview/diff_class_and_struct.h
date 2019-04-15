@@ -1,6 +1,6 @@
 #ifndef _DIFF_CLASS_AND_STRUCT_H
 #define _DIFF_CLASS_AND_STRUCT_H
-
+// 第6章 C++面向对象 面试题4 class和struct有什么区别
 #include<iostream>
 
 class CPoint

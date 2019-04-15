@@ -29,5 +29,17 @@
     <ClInclude Include="head.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="static_memory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="global_object.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="constructor_explicit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="explicit_constructor_effect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
