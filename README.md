@@ -1,3 +1,1 @@
-## Experiment of fast.ai course
-## xml 
-## C and C++ study
+本工程按照文件夹进行分类，主要包含了我在学习中实现的一些基本代码。
