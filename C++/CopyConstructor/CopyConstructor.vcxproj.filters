@@ -18,5 +18,13 @@
     <ClCompile Include="main.cc">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="copy_constructor.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="copy_constructor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
