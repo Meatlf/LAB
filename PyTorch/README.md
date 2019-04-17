@@ -1,2 +1,2 @@
 ## References
-[DEEP LEARNING WITH PYTORCH: A 60 MINUTE BLITZ](http://pytorch.org/docs/torch)
+[WHAT IS PYTORCH?](https://pytorch.org/tutorials/beginner/blitz/tensor_tutorial.html#sphx-glr-beginner-blitz-tensor-tutorial-py)
