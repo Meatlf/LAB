@@ -1,2 +1,1 @@
-## References
-[WHAT IS PYTORCH?](https://pytorch.org/tutorials/beginner/blitz/tensor_tutorial.html#sphx-glr-beginner-blitz-tensor-tutorial-py)
+本项目主要包括PyTorch的学习代码，主要目的是达到灵活使用PyTorch来构建深度学习项目。
