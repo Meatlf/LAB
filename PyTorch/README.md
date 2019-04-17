@@ -1,2 +1,1 @@
-## References
-[DEEP LEARNING WITH PYTORCH: A 60 MINUTE BLITZ](http://pytorch.org/docs/torch)
+本项目主要包括PyTorch的学习代码，主要目的是达到灵活使用PyTorch来构建深度学习项目。
