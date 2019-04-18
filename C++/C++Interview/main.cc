@@ -6,7 +6,7 @@
 [C和C++程序员面试秘笈]
 
 日期：
-2019-04-14
+2019-04-18
 */
 
 #include <iostream>
@@ -15,6 +15,7 @@
 #include"global_object.h"
 #include"constructor_explicit.h"
 #include"explicit_constructor_effect.h"
+#include"copy_constructor.h"
 
 using namespace std;
 
@@ -47,5 +48,12 @@ int main(void) {
 	short s = 42;
 	Show(s);
 
+	TestCopyConstructor test_copy_constructor_1(1);
+	TestCopyConstructor test_copy_constructor_2 = test_copy_constructor_1;
+	std::cout << "before fun1()..." << std::endl;
+	fun1(test_copy_constructor_1);
+
+	TestCopyConstructor test_copy_constructor_3 = fun2();
+	std::cout << "After fun2()..." << std::endl;
 	return 0;
 }
