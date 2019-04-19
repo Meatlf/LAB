@@ -2,11 +2,14 @@
 #include <arm_neon.h>
 
 int main(){
-		uint16x4_t a, b, c;
-		uint16_t a_r[] = { 256,2,3,4 };
-		uint16_t b_r[] = { 2 * 256,6,7,8 };
-		a = vld1_u16(a_r);
-		b = vld1_u16(b_r);
-		c = vqdmulh_s16(a, b);
-		b = vqdmulh_s16(a, c);
+
+	int8_t a_r[]={1,2,3,4,5,6,7,8};
+	int8_t b_r[]={9,10,11,12,13,14,15};
+
+	int8x8_t a = vld1_s8(a_r);
+	int8x8_t b = vld1_s8(b_r);
+
+	int8x8_t c = vadd_s8(a, b);
+
+	return 0;
 }
