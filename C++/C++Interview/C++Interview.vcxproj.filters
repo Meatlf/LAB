@@ -30,6 +30,9 @@
     <ClCompile Include="deep_copy_constructor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="string_class.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head.h">
@@ -51,6 +54,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="deep_copy_constructor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="string_class.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -10,38 +10,12 @@ C++ this指针的基本使用实例
 参考资料：
 [C++ this指针](http://www.runoob.com/cplusplus/cpp-this-pointer.html)
 
-日期：
-2019-04-14
+最近修改日期：
+2019-04-20
 */
 
 #include <iostream>
-
-using namespace std;
-
-class Box
-{
-public:
-	// 构造函数定义
-	Box(double l = 2.0, double b = 2.0, double h = 2.0)
-	{
-		cout << "Constructor called." << endl;
-		length = l;
-		breadth = b;
-		height = h;
-	}
-	double Volume()
-	{
-		return length * breadth * height;
-	}
-	int compare(Box box)
-	{
-		return this->Volume() > box.Volume();
-	}
-private:
-	double length;     // Length of a box
-	double breadth;    // Breadth of a box
-	double height;     // Height of a box
-};
+#include"this_point.h"
 
 int main(void)
 {
@@ -50,11 +24,18 @@ int main(void)
 
 	if (Box1.compare(Box2))
 	{
-		cout << "Box2 is smaller than Box1" << endl;
+		std::cout << "Box2 is smaller than Box1" << std::endl;
 	}
 	else
 	{
-		cout << "Box2 is equal to or larger than Box1" << endl;
+		std::cout << "Box2 is equal to or larger than Box1" << std::endl;
 	}
+
+	// Box* 定义指针p接受对象box的get_address()成员函数的返回值，并打印
+	Box* p = Box1.get_address();
+	std::cout << p << std::endl;
+
+	p = Box2.get_address();
+	std::cout << p << std::endl;
 	return 0;
 }

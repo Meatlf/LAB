@@ -1,12 +1,12 @@
 /*
 
-作者：tztang
-
 参考资料：
 [C和C++程序员面试秘笈]
 
+作者：tztang
+
 日期：
-2019-04-18
+2019-04-20
 */
 
 #include <iostream>
@@ -17,6 +17,7 @@
 #include"explicit_constructor_effect.h"
 #include"copy_constructor.h"
 #include"deep_copy_constructor.h"
+#include"string_class.h"
 
 using namespace std;
 
@@ -62,5 +63,12 @@ int main(void) {
 	DeepCopyConstructor deep_copy_constructor_2 = deep_copy_constructor_1;		//调用默认的复制构造函数
 
 	std::cout << "(t1.buf == t2.buf) ? " << (deep_copy_constructor_1.buf == deep_copy_constructor_2.buf ? "yes":"no") << std::endl;
+
+	// 第6章 C++面向对象 面试题26 编写类String的构造函数、析构函数和赋值函数
+	StringClass a("hello");		// 调用普通构造函数
+	StringClass b("world");		// 调用普通构造函数
+	StringClass c(a);			// 调用赋值函数
+	c = b;
+
 	return 0;
 }
