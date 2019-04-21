@@ -43,12 +43,14 @@ int main(void) {
 	//std::cout << "main() start" << std::endl;
 	//Test b;	// 局部变量
 
-	//Test1 t1 = 12;	// 隐式调用其构造函数，成功
-	////Test2 t2 = 12;	// 编译错误，不能隐式调用其构造函数
-	//Test2 t3(12);	// 显示调用成功
+	// 第6章 C++面向对象 面试题18 构造函数explicit与普通构造函数的区别
+	CommonConstructor1 common_constructor1 = 12;	// 隐式调用其构造函数，成功
+	//ExplicitConstructor2 t2 = 12;	// 编译错误，不能隐式调用其构造函数
+	ExplicitConstructor2 explicit_constructor2(12);	// 显示调用成功
 
-	//short s = 42;
-	//Show(s);
+	// 第6章 C++面向对象 面试题19 explicit构造函数的作用
+	short s = 42;
+	Show(s);
 
 	// 第6章 C++面向对象 面试题22 复制构造函数是什么？什么是深度复制和浅复制
 	TestCopyConstructor test_copy_constructor_1(1);

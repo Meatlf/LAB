@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="constructor_explicit.cpp" />
     <ClCompile Include="copy_constructor.cpp" />
     <ClCompile Include="deep_copy_constructor.cpp" />
     <ClCompile Include="diff_class_and_struct.cc" />

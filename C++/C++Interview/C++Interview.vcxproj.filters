@@ -33,6 +33,9 @@
     <ClCompile Include="string_class.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="constructor_explicit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head.h">

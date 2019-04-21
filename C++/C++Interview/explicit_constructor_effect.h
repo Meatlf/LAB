@@ -3,6 +3,7 @@
 // 第6章 C++面向对象 面试题19 explicit构造函数的作用
 
 #include<iostream>
+#include<string>
 
 class Number
 {
@@ -25,5 +26,5 @@ Number::~Number()
 {
 }
 
-void Show(const Number& n) { std::cout << "hello" << std::endl; }
+void Show(const Number& n) {std::cout<<n.type<<std::endl; }
 #endif
