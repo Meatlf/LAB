@@ -1,5 +1,5 @@
-#ifndef _THIS_POINT_H
-#define _THIS_POINT_H
+#ifndef THIS_POINT_H
+#define THIS_POINT_H
 class Box
 {
 public:

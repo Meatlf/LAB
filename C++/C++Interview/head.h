@@ -1,5 +1,5 @@
-#ifndef _HEAD_H
-#define _HEAD_H
+#ifndef HEAD_H
+#define HEAD_H
 
 // 第6章 C++面向对象
 // 面试题4 class和struct有什么区别

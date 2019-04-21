@@ -1,5 +1,5 @@
-#ifndef _EXPLICIT_CONSTRUCTOR_EFFECTOR_H
-#define _EXPLICIT_CONSTRUCTOR_EFFECTOR_H
+#ifndef EXPLICIT_CONSTRUCTOR_EFFECTOR_H
+#define EXPLICIT_CONSTRUCTOR_EFFECTOR_H
 // 第6章 C++面向对象 面试题19 explicit构造函数的作用
 
 #include<iostream>

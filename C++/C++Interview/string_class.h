@@ -1,5 +1,5 @@
-#ifndef _STRING_CLASS_H
-#define _STRING_CLASS_H
+#ifndef STRING_CLASS_H
+#define STRING_CLASS_H
 #include<iostream>
 // 第6章 C++面向对象 面试题26 编写类String的构造函数、析构函数和赋值函数
 

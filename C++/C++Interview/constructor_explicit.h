@@ -1,5 +1,5 @@
-#ifndef _CONSTRUCTOR_EXPLICIT_H
-#define _CONSTRUCTOR_EXPLICIT_H
+#ifndef CONSTRUCTOR_EXPLICIT_H
+#define CONSTRUCTOR_EXPLICIT_H
 // 第6章 C++面向对象 面试题18 构造函数explicit与普通构造函数的区别
 
 class Test1
