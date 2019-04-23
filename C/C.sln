@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\He
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FileReadAndWrite", "FileReadAndWrite\FileReadAndWrite.vcxproj", "{DB87FDCC-37D9-4017-8CC3-F5D7F7DDE8C5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FixedPointArithmetic", "FixedPointArithmetic\FixedPointArithmetic.vcxproj", "{C698B274-DBA1-4269-9B5D-0479B78FAB0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{DB87FDCC-37D9-4017-8CC3-F5D7F7DDE8C5}.Release|x64.Build.0 = Release|x64
 		{DB87FDCC-37D9-4017-8CC3-F5D7F7DDE8C5}.Release|x86.ActiveCfg = Release|Win32
 		{DB87FDCC-37D9-4017-8CC3-F5D7F7DDE8C5}.Release|x86.Build.0 = Release|Win32
+		{C698B274-DBA1-4269-9B5D-0479B78FAB0A}.Debug|x64.ActiveCfg = Debug|x64
+		{C698B274-DBA1-4269-9B5D-0479B78FAB0A}.Debug|x64.Build.0 = Debug|x64
+		{C698B274-DBA1-4269-9B5D-0479B78FAB0A}.Debug|x86.ActiveCfg = Debug|Win32
+		{C698B274-DBA1-4269-9B5D-0479B78FAB0A}.Debug|x86.Build.0 = Debug|Win32
+		{C698B274-DBA1-4269-9B5D-0479B78FAB0A}.Release|x64.ActiveCfg = Release|x64
+		{C698B274-DBA1-4269-9B5D-0479B78FAB0A}.Release|x64.Build.0 = Release|x64
+		{C698B274-DBA1-4269-9B5D-0479B78FAB0A}.Release|x86.ActiveCfg = Release|Win32
+		{C698B274-DBA1-4269-9B5D-0479B78FAB0A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
