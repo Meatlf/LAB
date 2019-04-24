@@ -68,8 +68,21 @@ int main(void) {
 	ans2 = fa + fb;
 	printf("Testing %s\n fixed point answer=%f\n floating point answer=%f\n", "FADD", (double)(ans1) / (double)(1 << (q)), ans2);
 #endif
+
 	TEST(FSUB(a, b), fa - fb, "FSUB");
+
+#if DEBUG == 0
 	TEST(FMUL(a, b, q), fa*fb, "FMUL");
+#elif DEBUG == 1
+	a = a1 = randint();
+	b = bi = a2 = randint();
+	fa = (double)(a) / (double)(1 << (q));
+	fb = (double)(b) / (double)(1 << (q));
+	ans1 = (a * b) >> q;
+	ans2 = fa * fb;
+	printf("Testing %s\n fixed point answer=%f\n floating point answer=%f\n",
+	"FMUL", (double)(ans1) / (double)(1 << (q)), ans2);
+#endif
 	TEST(FDIV(a, b, q), fa / fb, "FDIV");
 	TEST(FADDI(a, bi, q), fa + bi, "FADDI");
 	TEST(FSUBI(a, bi, q), fa - bi, "FSUBI");
