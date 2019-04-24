@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
+#define DEBUG	(1)
+
 /* DEFINE THE MACROS */
 /* The basic operations perfomed on two numbers a and b of fixed
  point q format returning the answer in q format */
@@ -53,7 +56,18 @@ int main(void) {
 	int ans1;
 	double ans2;
 	/* test each of the MACRO's with some random data */
+
+#if DEBUG == 0
 	TEST(FADD(a, b), fa + fb, "FADD");
+#elif DEBUG == 1
+	a = a1 = randint();
+	b = bi = a2 = randint();
+	fa = (double)(a) / (double)(1 << (q));
+	fb = (double)(b) / (double)(1 << (q));
+	ans1 = a + b;
+	ans2 = fa + fb;
+	printf("Testing %s\n fixed point answer=%f\n floating point answer=%f\n", "FADD", (double)(ans1) / (double)(1 << (q)), ans2);
+#endif
 	TEST(FSUB(a, b), fa - fb, "FSUB");
 	TEST(FMUL(a, b, q), fa*fb, "FMUL");
 	TEST(FDIV(a, b, q), fa / fb, "FDIV");
