@@ -51,7 +51,7 @@ namespace Core {
 		}
 
 		// write
-		fp = fopen("../data/output/DstLena.bin", "wb");
+		errno_t error = fopen_s(&fp,"../data/output/DstLena.bin", "wb");
 		fwrite(dst_data, sizeof(char), WIDTH * 3 * HEIGHT, fp);
 		cv::waitKey(0);
 		src.release();
