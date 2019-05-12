@@ -19,10 +19,10 @@ static void print(float *input, int height, int width) {
 };
 
 static int loop = 10;
-static int height = 2000;
-static int width = 2000;
-static int radius = 3;
-static int printMat = 0;
+static int height = 7;
+static int width = 5;
+static int radius = 1;
+static int printMat = 1;
 
 TEST(netTest, org_boxfilter)
 {
@@ -160,6 +160,53 @@ TEST(netTest, fast_boxfilter_v2)
         std::cout << "result: " << std::endl;
         print(&output[0], height, width);
     }
+}
+
+TEST(netTest, fast_boxfilter_v3)
+{
+	std::vector<float> input;
+	std::vector<float> output;
+
+	int size = height * width;
+
+	input.resize(size);
+	output.resize(size);
+
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_real_distribution<> dis(-2.0, 2.0);
+
+	for (int i = 0; i < size; ++i) {
+		//input[i] = dis(gen);
+		input[i] = i;
+	}
+
+	for (int i = 0; i < size; ++i) {
+		output[i] = 0;
+	}
+
+	BoxFilter boxFilter;
+	boxFilter.init(height, width, radius);
+
+	float avgTime = 0;
+	float tmp;
+	for (int i = 0; i < loop; ++i) {
+		auto startClock = std::chrono::system_clock::now();
+		boxFilter.fastFilterV3(&input[0], radius, height, width, &output[0]);
+		auto endClock = std::chrono::system_clock::now();
+		auto duration = std::chrono::duration_cast<std::chrono::microseconds>(endClock - startClock);
+		tmp = double(duration.count()) * std::chrono::microseconds::period::num / 1000;
+		avgTime += tmp;
+		std::cout << "          [" << i << "]" << " Fast BoxFilfer V2 Cost time: " << tmp << "ms" << std::endl;
+
+	}
+	std::cout << "\n          Fast BoxFilfer V2 Average Cost time: " << avgTime / loop << "ms" << std::endl;
+
+
+	if (printMat == 1) {
+		std::cout << "result: " << std::endl;
+		print(&output[0], height, width);
+	}
 }
 
 TEST(netTest, fast_boxfilter_v2_neon_intrinsics)

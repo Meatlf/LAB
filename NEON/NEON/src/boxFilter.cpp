@@ -144,27 +144,40 @@ void BoxFilter::fastFilterV2(float *input, int radius, int height, int width, fl
 void BoxFilter::fastFilterV3(float * input, int radius, int height, int width, float * output)
 {
 	float* temp;
-	int kernel_half = 1;
-	int temp_height = height + 2*kernel_half;
-	int temp_width = width + 2*kernel_half;
 
+	int temp_height = height + 2*radius;
+	int temp_width = width + 2*radius;
+
+	temp = (float*)malloc(temp_height*temp_width*sizeof(float));
 	memset(temp,0,temp_height*temp_width);
 
 	// 计算积分图
-	for (int h = kernel_half; h < temp_height; ++h)
+	for (int h = radius; h < temp_height; ++h)
 	{
 		int height_shift_before = (h - 1)*temp_width;
 		int height_shift = h * temp_width;
-		for (int w = kernel_half;w < temp_width;++w)
+		for (int w = radius;w < temp_width;++w)
 		{
-			for (int i = 0;i < (w - kernel_half);i++)
+			for (int i = 0;i < (w - radius);i++)
 			{
-				temp[height_shift + w] = temp[height_shift_before] + input[(h-kernel_half)*width+i];
+				temp[height_shift + w] = temp[height_shift_before] + input[(h-radius)*width+i];
 			}
 		}
 	}
 
 	// 通过计算图“查表”得到输出图像
+	for (int h = 0;h < height;h++)
+	{
+		int shift = h * width;
+		for (int w = 0;w < width;w++)
+		{
+			output[w+shift] = temp[(h+2*radius)*temp_width+(w+2*radius)]
+				+ temp[h*temp_width + w]
+				- temp[h*temp_width + (w + 2 * radius)]
+				- temp[(h+2*radius)*temp_width + w];
+		}
+	}
+
 }
 
 void BoxFilter::fastFilterV2NeonIntrinsics(float *input, int radius, int height, int width, float *output) {
