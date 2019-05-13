@@ -8,6 +8,30 @@
 #include <arm_neon.h>
 #endif // __ARM_NEON
 
+inline void Integral(float* input, float* temp, int height, int width)
+{
+	// calculate integral of the first line  
+	for (int i = 0;i<width;i++) {
+		temp[i] = input[i];
+		if (i>0) {
+			temp[i] += temp[i - 1];
+		}
+	}
+	for (int i = 1;i<height;i++) {
+		int offset = i*width;
+		// first column of each line  
+		temp[offset] = temp[offset - width] + input[offset];
+		// other columns
+		for (int j = 1; j < width; j++) {
+			temp[offset + j] = temp[offset + j - 1] +
+				temp[offset + j - width] -
+				temp[offset + j - width - 1] +
+				input[offset + j];
+		}
+	}
+	return;
+}
+
 void BoxFilter::filter(float *input, int radius, int height, int width, float *output) {
   for (int h = 0; h < height; ++h) {
     int height_sift = h * width;
@@ -152,19 +176,16 @@ void BoxFilter::fastFilterV3(float * input, int radius, int height, int width, f
 	memset(temp,0,temp_height*temp_width);
 
 	// 计算积分图
-	for (int h = radius; h < temp_height; ++h)
-	{
-		int height_shift_before = (h - 1)*temp_width;
-		int height_shift = h * temp_width;
-		for (int w = radius;w < temp_width;++w)
-		{
-			for (int i = 0;i < (w - radius);i++)
-			{
-				temp[height_shift + w] = temp[height_shift_before] + input[(h-radius)*width+i];
-			}
-		}
-	}
+	Integral(input, temp, height, width);
 
+	for (int j = 0;j < height;j++)
+	{
+		for (int i = 0;i < width;i++)
+		{
+			std::cout << temp[j*width + i] << " ";
+		}
+		std::cout<<std::endl;
+	}
 	// 通过计算图“查表”得到输出图像
 	for (int h = 0;h < height;h++)
 	{

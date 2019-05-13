@@ -197,14 +197,15 @@ TEST(netTest, fast_boxfilter_v3)
 		auto duration = std::chrono::duration_cast<std::chrono::microseconds>(endClock - startClock);
 		tmp = double(duration.count()) * std::chrono::microseconds::period::num / 1000;
 		avgTime += tmp;
-		std::cout << "          [" << i << "]" << " Fast BoxFilfer V2 Cost time: " << tmp << "ms" << std::endl;
+		std::cout << "          [" << i << "]" << " Fast BoxFilfer V3 Cost time: " << tmp << "ms" << std::endl;
 
 	}
-	std::cout << "\n          Fast BoxFilfer V2 Average Cost time: " << avgTime / loop << "ms" << std::endl;
+	std::cout << "\n          Fast BoxFilfer V3 Average Cost time: " << avgTime / loop << "ms" << std::endl;
 
 
 	if (printMat == 1) {
 		std::cout << "result: " << std::endl;
+		print(&input[0], height, width);	// for debug by ttz
 		print(&output[0], height, width);
 	}
 }
