@@ -20,7 +20,7 @@ C++ std::Stack的基本使用实例
 #include<vector>
 #include<deque>
 
-int main()
+void test0()
 {
 	std::deque<int> mydeque(3, 100);	// deque with 3 elements
 	std::vector<int> myvector(2, 200);	// vector with 2 elements
@@ -36,5 +36,30 @@ int main()
 	std::cout << "size of third:" << third.size() << '\n';
 	std::cout << "size of fourth:" << fourth.size() << '\n';
 
+	return;
+}
+
+void test_stack_empty()
+{
+	std::stack<int> mystack;
+	int sum(0);
+
+	int i = 1;
+	for (;i <= 10;i++)mystack.push(i);
+
+	while (!mystack.empty())
+	{
+		sum += mystack.top();
+		mystack.pop();
+	}
+	std::cout << "Total:" << sum << '\n';
+	return;
+}
+
+int main()
+{
+	test0();
+	test_stack_empty();
+	system("pause");
 	return 0;
 }
