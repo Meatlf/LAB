@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\array.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\binary_tree.cc">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -48,6 +45,12 @@
     <ClCompile Include="..\src\myString.cc">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\baseAlg.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\array.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\inc\array.h">
@@ -75,6 +78,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\inc\myString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="baseAlg.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

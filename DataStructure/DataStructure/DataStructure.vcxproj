@@ -122,7 +122,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\array.cpp" />
+    <ClCompile Include="..\src\array.cc" />
+    <ClCompile Include="..\src\baseAlg.cc" />
     <ClCompile Include="..\src\binary_tree.cc" />
     <ClCompile Include="..\src\double_num.cc" />
     <ClCompile Include="..\src\find_number_in_martrix.cc" />
@@ -144,6 +145,7 @@
     <ClInclude Include="..\inc\sort.h" />
     <ClInclude Include="..\inc\stack.h" />
     <ClInclude Include="..\inc\myString.h" />
+    <ClInclude Include="baseAlg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

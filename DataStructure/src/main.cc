@@ -6,7 +6,16 @@
 #include"binary_tree.h"
 #include"binary_tree.h"
 #include"myString.h"
+#include"baseAlg.h"
 #define ArraySize 6
+
+void  test_array()
+{
+	std::vector<int> v;
+	for (int i = 1; i <= 6; i++)
+		v.push_back(i);
+	std::cout << ARRAY::minSubArrayLen(15, v) << std::endl;
+}
 
 void test_replace_blank()
 {
@@ -74,7 +83,7 @@ void test_binary_tree()
 	b->rchild = NULL;
 	char* str = "A(B(D(,G)),C(E,F))";
 
-	BINARYTREE::createBTree(b,str);
+	BINARYTREE::createBTree(b, str);
 
 	printf("b:");BINARYTREE::dispBTree(b);printf("\n");
 
@@ -97,9 +106,10 @@ void test_binary_tree()
 }
 
 int main(int argc, char* argv[]) {
-	test_replace_blank();
-	test_link_list();
-	test_recursion();
-	test_binary_tree();
+	//test_replace_blank();
+	//test_link_list();
+	//test_recursion();
+	//test_binary_tree();
+	test_array();
 	return 0;
 }
