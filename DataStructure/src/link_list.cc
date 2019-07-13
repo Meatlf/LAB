@@ -177,7 +177,7 @@ void LISTNODE::printListReversely(ListNode * pHeadNode)
 {
 	if (pHeadNode == NULL || pHeadNode->pNext == NULL)
 		std::cout << "The list is empty!" << std::endl;
-	else if (pHeadNode->pNext->pNext==NULL)
+	else if (pHeadNode->pNext->pNext == NULL)
 	{
 		std::cout << "Print list reversely!" << std::endl;
 		std::cout << pHeadNode->pNext->iVal << std::endl;
@@ -199,4 +199,69 @@ void LISTNODE::printListReversely(ListNode * pHeadNode)
 		stackList.pop();
 	}
 	std::cout << std::endl;
+}
+
+/*
+面18：删除链表的节点
+题目：给定单向链表的头指针和一个节点指针，定义一个函数在O(1)时间内删除该节点
+输入：链表、待删除的节点
+输出：链表
+解题思路：
+一般情况：要删除的节点不是尾节点：假设要删除i节点，使用i节点的下一节点j复制替换掉i节点，并且删掉原始的j节点；
+特殊情况：（1）链表只有一个节点；
+（2）要删除的节点为尾节点。
+*/
+
+/*
+Q：如何进行复制并替换节点？
+
+Q：如何删除节点？
+A： delete pNext;
+	pNext = NULL;
+
+Q：如何判断链表只有一个节点？
+A：pNode->pNext != NULL && pNode->pNext->pNext == NULL
+
+Q：如何判断是否为尾节点？
+A：
+*/
+void LISTNODE::deleteNode(ListNode * pNode, ListNode * pToBeDeletedNode)
+{
+	// 参数合法性测试
+	if (pNode == NULL || pToBeDeletedNode == NULL)
+		return;
+
+	// 要删除的节点不是尾节点
+	if (pToBeDeletedNode->pNext != NULL)
+	{
+		ListNode* pNextNode = pToBeDeletedNode->pNext;
+		pToBeDeletedNode->iVal = pNextNode->iVal;
+		pToBeDeletedNode->pNext = pNextNode->pNext;
+		delete(pNextNode);
+		pNextNode->pNext = NULL;
+		return;
+	}
+
+	// 链表只有一个节点，删除头节点（也是尾节点）
+	if (pNode->pNext != NULL && pNode->pNext->pNext == NULL)
+	{
+		delete(pNode->pNext);
+		pNode->pNext->pNext = NULL;
+		pNode->pNext = NULL;
+		return;
+	}
+
+	// 链表中有多个节点，删除尾节点
+	if (pToBeDeletedNode != NULL && pToBeDeletedNode->pNext == NULL)
+	{
+		ListNode* pCurNode = pNode->pNext;
+		while (pCurNode->pNext != pToBeDeletedNode)
+		{
+			pCurNode = pCurNode->pNext;
+		}
+		pCurNode->pNext = NULL;
+		delete(pToBeDeletedNode);
+		pToBeDeletedNode->pNext = NULL;
+		return;
+	}
 }

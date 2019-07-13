@@ -7,6 +7,7 @@
 #include"binary_tree.h"
 #include"myString.h"
 #include"baseAlg.h"
+#include"stack.h"
 #define ArraySize 6
 
 void  test_array()
@@ -105,11 +106,18 @@ void test_binary_tree()
 	BINARYTREE::destroyBTree(b);
 }
 
+void test_stack()
+{
+	std::string s = "[[]])";
+	std::cout << SQSTACK::isValid(s) << std::endl;
+}
+
 int main(int argc, char* argv[]) {
 	//test_replace_blank();
 	//test_link_list();
 	//test_recursion();
 	//test_binary_tree();
-	test_array();
+	//test_array();
+	test_stack();
 	return 0;
 }

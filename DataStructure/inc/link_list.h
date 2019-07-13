@@ -44,7 +44,18 @@ namespace LISTNODE {
 	// 解题关键：符合栈模型，使用栈来实现从尾到头打印链表
 	void printListReversely(ListNode* pHeadNode);
 
-	//void deleteNode(ListNode* pNode);
+	/*
+	 面18：删除链表的节点
+	 题目：给定单向链表的头指针和一个节点指针，定义一个函数在O(1)时间内删除该节点
+	 输入：链表、待删除的节点
+	 输出：链表
+	 解题思路：
+		一般情况：假设要删除i节点，使用i节点的下一节点j复制替换掉i节点，并且删掉原始的j节点；
+		特殊情况：（1）链表只有一个节点；
+				  （2）要删除的节点为尾节点。
+	*/
+	void deleteNode(ListNode* pNode, ListNode* toBeDeletedNode);
+
 	//ListNode* reverseList(ListNode* head);
 	//// 876.链表的中间节点
 	//ListNode* middleNode(ListNode* head);

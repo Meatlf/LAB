@@ -1,5 +1,6 @@
 #pragma once
 #include<stack>
+#include<assert.h>
 typedef char ElemType;
 #define MaxSize 4
 
@@ -23,6 +24,12 @@ namespace SQSTACK {
 	// 进栈
 	// 在栈不满的条件下先将栈顶指针增1，然后在该位置上插入元素e，并返回真；否则返回假。
 	bool pushStack(SqStack* &s, ElemType e);
+
+	/*
+	Leetcode 20. Valid Parentheses
+	*/
+	bool isValid(std::string s);
+	bool isValidOpt1(std::string s);
 }
 
 // 面试题9：用两个栈实现队列
