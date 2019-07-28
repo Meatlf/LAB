@@ -15,4 +15,9 @@ namespace ARRAY {
 	int minSubArrayLen(int s, std::vector<int>& nums);
 	
 	int minSubArrayLenOpt1(int s, std::vector<int>& nums);
+
+	// 面试题21：调整数组顺序使奇数位于偶数前面
+	// 题目：输入一个整数数组，实现一个函数来调整数组中数字的顺序，使得所有奇数位于数组的前半部分，所有偶数位于数组的后半部分。
+	// 解题分析：“广义的排序”
+	// 输入：数组
 }

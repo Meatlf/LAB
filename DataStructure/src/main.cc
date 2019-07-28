@@ -112,12 +112,22 @@ void test_stack()
 	std::cout << SQSTACK::isValid(s) << std::endl;
 }
 
+void test_my_string()
+{
+	const char* pcStr = "0123___";
+	const char** ppStr = &pcStr;
+
+	std::cout << STRING::scanUnsignedInteger(ppStr)
+		<< std::endl;
+}
+
 int main(int argc, char* argv[]) {
 	//test_replace_blank();
 	//test_link_list();
 	//test_recursion();
 	//test_binary_tree();
 	//test_array();
-	test_stack();
+	//test_stack();
+	test_my_string();
 	return 0;
 }
