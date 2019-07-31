@@ -53,3 +53,29 @@ int ARRAY::minSubArrayLenOpt1(int s, std::vector<int>& nums)
 {
 	return 0;
 }
+
+void ARRAY::paritySortArray(int * iArray, int iLength)
+{
+	int* p = iArray;
+	int* q = iArray + iLength - 1;
+	while (q - p > 0)
+	{
+		while (*p % 2 == 1)
+		{
+			p++;
+		}
+
+		while (*q % 2 == 0)
+		{
+			q--;
+		}
+		if (q - p > 0)
+		{
+			*p = *p + *q;
+			*q = *p - *q;
+			*p = *p - *q;
+		}
+		p++;
+		q--;
+	}
+}

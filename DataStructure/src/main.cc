@@ -16,6 +16,31 @@ void  test_array()
 	for (int i = 1; i <= 6; i++)
 		v.push_back(i);
 	std::cout << ARRAY::minSubArrayLen(15, v) << std::endl;
+
+	std::cout << "ÃæÊÔÌâ21£º" << std::endl;
+	int iArray[5] = { 1,2,3,4,5 };
+	int iLength = 5;
+	ARRAY::paritySortArray(iArray, iLength);
+	for (int i = 0;i < iLength;i++)
+		std::cout << iArray[i] << std::endl;
+
+	int* iArray2 = NULL;
+	int iLength2 = 0;
+	ARRAY::paritySortArray(iArray2, iLength2);
+	for (int i = 0;i < iLength2;i++)
+		std::cout << iArray2[i] << std::endl;
+
+	int iArray3[5] = { 1,3,5,2,4 };
+	int iLength3 = 5;
+	ARRAY::paritySortArray(iArray3, iLength3);
+	for (int i = 0;i < iLength3;i++)
+		std::cout << iArray3[i] << std::endl;
+
+	int iArray4[5] = { 2,4,1,3,5};
+	int iLength4 = 5;
+	ARRAY::paritySortArray(iArray4, iLength4);
+	for (int i = 0;i < iLength4;i++)
+		std::cout << iArray4[i] << std::endl;
 }
 
 void test_replace_blank()
@@ -126,8 +151,8 @@ int main(int argc, char* argv[]) {
 	//test_link_list();
 	//test_recursion();
 	//test_binary_tree();
-	//test_array();
+	test_array();
 	//test_stack();
-	test_my_string();
+	//test_my_string();
 	return 0;
 }
