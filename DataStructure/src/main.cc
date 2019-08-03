@@ -11,6 +11,45 @@
 #include"stack.h"
 #define ArraySize 6
 
+TEST(paritySortArray, case0)
+{
+	std::cout << "面试题21：" << std::endl;
+	int iArray[5] = { 1,2,3,4,5 };
+	int iArrayOutput[5] = { 1,5,3,4,2 };
+	int iLength = 5;
+	ARRAY::paritySortArray(iArray, iLength);
+	for (int i = 0;i < iLength;i++)
+		EXPECT_EQ(iArrayOutput[i], iArray[i]);
+}
+
+TEST(paritySortArray, case1)
+{
+	int* iArray = NULL;
+	int iLength = 0;
+	ARRAY::paritySortArray(iArray, iLength);
+	EXPECT_EQ(NULL, iArray);
+}
+
+TEST(paritySortArray, case2)
+{
+	int iArray[5] = { 1,5,3,4,2 };
+	int iArrayOutput[5] = { 1,5,3,4,2 };
+	int iLength = 5;
+	ARRAY::paritySortArray(iArray, iLength);
+	for (int i = 0;i < iLength;i++)
+		EXPECT_EQ(iArrayOutput[i], iArray[i]);
+}
+
+TEST(paritySortArray, case3)
+{
+	int iArray[5] = { 2,4,1,3,5 };
+	int iArrayOutput[5] = { 5,3,1,4,2 };
+	int iLength = 5;
+	ARRAY::paritySortArray(iArray, iLength);
+	for (int i = 0;i < iLength;i++)
+		EXPECT_EQ(iArrayOutput[i], iArray[i]);
+}
+
 void  test_array()
 {
 	std::vector<int> v;
@@ -18,38 +57,6 @@ void  test_array()
 		v.push_back(i);
 	std::cout << "LeetCode 209 长度最小的子数组:" << std::endl;
 	std::cout << ARRAY::minSubArrayLen(15, v) << std::endl;
-
-	std::cout << "面试题21：" << std::endl;
-	int iArray[5] = { 1,2,3,4,5 };
-	int iArrayOutput[5] = {1,5,3,4,2};
-	int iLength = 5;
-	ARRAY::paritySortArray(iArray, iLength);
-	for (int i = 0;i < iLength;i++)
-	{
-		std::cout << iArray[i] << " ";
-	}
-	std::cout << std::endl;
-
-	int* iArray2 = NULL;
-	int iLength2 = 0;
-	ARRAY::paritySortArray(iArray2, iLength2);
-	for (int i = 0;i < iLength2;i++)
-		std::cout << iArray2[i] << " ";
-	std::cout << std::endl;
-
-	int iArray3[5] = { 1,3,5,2,4 };
-	int iLength3 = 5;
-	ARRAY::paritySortArray(iArray3, iLength3);
-	for (int i = 0;i < iLength3;i++)
-		std::cout << iArray3[i] << " ";
-	std::cout << std::endl;
-
-	int iArray4[5] = { 2,4,1,3,5};
-	int iLength4 = 5;
-	ARRAY::paritySortArray(iArray4, iLength4);
-	for (int i = 0;i < iLength4;i++)
-		std::cout << iArray4[i] << " ";
-	std::cout << std::endl;
 }
 
 void test_replace_blank()
