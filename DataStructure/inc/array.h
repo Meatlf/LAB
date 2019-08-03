@@ -28,5 +28,8 @@ namespace ARRAY {
 	// 解法2：双指针法
 	void paritySortArray(int* iArray, int iLength);
 
-	void paritySortArray1(int* iArray, int iLength, bool(*isEven)(int));
+	// 优化1：基于解法2的优化，将判断奇偶数组分为两段中解耦出来，使得代码更具有灵活性。
+	// 说明：注意函数指针的使用。
+	void paritySortArrayOpt1(int* iArray, int iLength, bool(*isEven)(int));
+	bool isEven(int n);
 }

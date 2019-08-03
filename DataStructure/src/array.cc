@@ -64,12 +64,12 @@ void ARRAY::paritySortArray(int * iArray, int iLength)
 
 	while (p < q)		// 同类型指针可以直接比较大小
 	{
-		while (*p % 2 == 1)
+		while (p < q && ((*p) & 0x01))	// 使用位的与运算取代取余运算能提高性能
 		{
 			p++;
 		}
 
-		while (*q % 2 == 0)
+		while (p < q && !((*q) & 0x01))
 		{
 			q--;
 		}
@@ -85,7 +85,7 @@ void ARRAY::paritySortArray(int * iArray, int iLength)
 	}
 }
 
-void ARRAY::paritySortArray1(int * iArray, int iLength, bool(*isEven)(int))
+void ARRAY::paritySortArrayOpt1(int * iArray, int iLength, bool(*isEven)(int))
 {
 	if (iArray == NULL || iLength == 0)
 		return;
@@ -95,12 +95,12 @@ void ARRAY::paritySortArray1(int * iArray, int iLength, bool(*isEven)(int))
 
 	while (p < q)		// 同类型指针可以直接比较大小
 	{
-		while (*p % 2 == 1)
+		while (p < q && !isEven(*p))
 		{
 			p++;
 		}
 
-		while (*q % 2 == 0)
+		while (p < q && isEven(*q))
 		{
 			q--;
 		}
@@ -114,4 +114,9 @@ void ARRAY::paritySortArray1(int * iArray, int iLength, bool(*isEven)(int))
 		p++;
 		q--;
 	}
+}
+
+bool ARRAY::isEven(int n)
+{
+	return (n & 1) == 0;
 }

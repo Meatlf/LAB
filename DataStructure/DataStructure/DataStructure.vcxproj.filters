@@ -27,9 +27,6 @@
     <ClCompile Include="..\src\link_list.cc">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\main.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\recursion.cc">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -49,6 +46,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\src\array.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\test.cc">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
