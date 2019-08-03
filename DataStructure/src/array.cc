@@ -56,9 +56,13 @@ int ARRAY::minSubArrayLenOpt1(int s, std::vector<int>& nums)
 
 void ARRAY::paritySortArray(int * iArray, int iLength)
 {
+	if (iArray == NULL || iLength == 0)
+		return;
+
 	int* p = iArray;
 	int* q = iArray + iLength - 1;
-	while (q - p > 0)
+
+	while (p < q)		// 同类型指针可以直接比较大小
 	{
 		while (*p % 2 == 1)
 		{
@@ -69,7 +73,39 @@ void ARRAY::paritySortArray(int * iArray, int iLength)
 		{
 			q--;
 		}
-		if (q - p > 0)
+
+		if (p < q)
+		{
+			*p = *p + *q;
+			*q = *p - *q;
+			*p = *p - *q;
+		}
+		p++;
+		q--;
+	}
+}
+
+void ARRAY::paritySortArray1(int * iArray, int iLength, bool(*isEven)(int))
+{
+	if (iArray == NULL || iLength == 0)
+		return;
+
+	int* p = iArray;
+	int* q = iArray + iLength - 1;
+
+	while (p < q)		// 同类型指针可以直接比较大小
+	{
+		while (*p % 2 == 1)
+		{
+			p++;
+		}
+
+		while (*q % 2 == 0)
+		{
+			q--;
+		}
+
+		if (p < q)
 		{
 			*p = *p + *q;
 			*q = *p - *q;

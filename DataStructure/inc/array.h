@@ -21,7 +21,12 @@ namespace ARRAY {
 	// 解题分析：“广义的排序”
 	// 解法1：暴力法：从头到尾扫描这个数组，每碰到一个偶数，拿出这个数字，并把位于这个数字后面的所有数字往前挪动一位。
 	// 挪完之后在数组的末尾有一个空位，这时把该偶数放入这个空位。由于每碰到一个偶数就需要移动O(n)个数字，因此总的时间复杂度是O(n^2)。
+	// 解法2：双指针法
 	// 输入：数组，数组长度
 	// 输出：数组
+
+	// 解法2：双指针法
 	void paritySortArray(int* iArray, int iLength);
+
+	void paritySortArray1(int* iArray, int iLength, bool(*isEven)(int));
 }

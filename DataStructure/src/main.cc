@@ -1,4 +1,5 @@
 #include<iostream>
+#include"gtest\gtest.h"
 #include"define_function.h"
 #include"array.h"
 #include"link_list.h"
@@ -15,32 +16,40 @@ void  test_array()
 	std::vector<int> v;
 	for (int i = 1; i <= 6; i++)
 		v.push_back(i);
+	std::cout << "LeetCode 209 长度最小的子数组:" << std::endl;
 	std::cout << ARRAY::minSubArrayLen(15, v) << std::endl;
 
 	std::cout << "面试题21：" << std::endl;
 	int iArray[5] = { 1,2,3,4,5 };
+	int iArrayOutput[5] = {1,5,3,4,2};
 	int iLength = 5;
 	ARRAY::paritySortArray(iArray, iLength);
 	for (int i = 0;i < iLength;i++)
-		std::cout << iArray[i] << std::endl;
+	{
+		std::cout << iArray[i] << " ";
+	}
+	std::cout << std::endl;
 
 	int* iArray2 = NULL;
 	int iLength2 = 0;
 	ARRAY::paritySortArray(iArray2, iLength2);
 	for (int i = 0;i < iLength2;i++)
-		std::cout << iArray2[i] << std::endl;
+		std::cout << iArray2[i] << " ";
+	std::cout << std::endl;
 
 	int iArray3[5] = { 1,3,5,2,4 };
 	int iLength3 = 5;
 	ARRAY::paritySortArray(iArray3, iLength3);
 	for (int i = 0;i < iLength3;i++)
-		std::cout << iArray3[i] << std::endl;
+		std::cout << iArray3[i] << " ";
+	std::cout << std::endl;
 
 	int iArray4[5] = { 2,4,1,3,5};
 	int iLength4 = 5;
 	ARRAY::paritySortArray(iArray4, iLength4);
 	for (int i = 0;i < iLength4;i++)
-		std::cout << iArray4[i] << std::endl;
+		std::cout << iArray4[i] << " ";
+	std::cout << std::endl;
 }
 
 void test_replace_blank()
@@ -146,6 +155,19 @@ void test_my_string()
 		<< std::endl;
 }
 
+int fun(int a, int b)
+{
+	return (a - b);
+}
+
+TEST(fun, case1)
+{
+	EXPECT_LT(-2, fun(1, 2));
+	EXPECT_EQ(-1, fun(1, 2));
+	ASSERT_LT(-2, fun(1, 2));
+	ASSERT_EQ(-1, fun(1, 2));
+}
+
 int main(int argc, char* argv[]) {
 	//test_replace_blank();
 	//test_link_list();
@@ -154,5 +176,6 @@ int main(int argc, char* argv[]) {
 	test_array();
 	//test_stack();
 	//test_my_string();
-	return 0;
+	testing::InitGoogleTest(&argc, argv);
+	return RUN_ALL_TESTS();
 }
