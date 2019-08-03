@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HelloJNI",
+            "request": "launch",
+            "mainClass": "HelloJNI"
+        }
+    ]
+}
