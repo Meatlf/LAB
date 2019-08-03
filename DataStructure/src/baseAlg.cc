@@ -46,7 +46,7 @@ double BASEALG::powerWithUnsignedExponent(double base, unsigned int exponent)
 
 	double result = powerWithUnsignedExponent(base, exponent >> 1);
 	result *= result;
-	if (exponent & 0x1 == 1)
+	if ((exponent & 0x1) == 1)
 		result *= base;
 
 	return result;

@@ -30,7 +30,7 @@ bool SQSTACK::isValid(std::string s)
 {
 	std::stack<char> Stack;
 
-	for (int i = 0;i < s.size();i++)
+	for (unsigned int i = 0;i < s.size();i++)
 	{
 		if (s[i] == '(' || s[i] == '[' || s[i] == '{')
 			Stack.push(s[i]);
@@ -66,7 +66,7 @@ bool SQSTACK::isValidOpt1(std::string s)
 {
 	std::stack<char> Stack;
 
-	for (int i = 0;i < s.size();i++)
+	for (unsigned int i = 0;i < s.size();i++)
 	{
 		if (s[i] == '(' || s[i] == '[' || s[i] == '{')
 			Stack.push(s[i]);

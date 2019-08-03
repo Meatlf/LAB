@@ -14,60 +14,60 @@
 TEST(paritySortArray, case0)
 {
 	std::cout << "ÃæÊÔÌâ21£º" << std::endl;
-	int iArray[5] = { 1,2,3,4,5 };
+	int iArrayInput[5] = { 1,2,3,4,5 };
 	int iArrayOutput[5] = { 1,5,3,4,2 };
 	int iLength = 5;
-	ARRAY::paritySortArray(iArray, iLength);
+	ARRAY::paritySortArray(iArrayInput, iLength);
 	for (int i = 0;i < iLength;i++)
-		EXPECT_EQ(iArrayOutput[i], iArray[i]);
+		EXPECT_EQ(iArrayOutput[i], iArrayInput[i]);
 }
 
 TEST(paritySortArray, case1)
 {
-	int* iArray = NULL;
+	int* iArrayInput = NULL;
 	int iLength = 0;
-	ARRAY::paritySortArray(iArray, iLength);
-	EXPECT_EQ(NULL, iArray);
+	ARRAY::paritySortArray(iArrayInput, iLength);
+	EXPECT_EQ(NULL, iArrayInput);
 }
 
 TEST(paritySortArray, case2)
 {
-	int iArray[5] = { 1,5,3,4,2 };
+	int iArrayInput[5] = { 1,5,3,4,2 };
 	int iArrayOutput[5] = { 1,5,3,4,2 };
 	int iLength = 5;
-	ARRAY::paritySortArray(iArray, iLength);
+	ARRAY::paritySortArray(iArrayInput, iLength);
 	for (int i = 0;i < iLength;i++)
-		EXPECT_EQ(iArrayOutput[i], iArray[i]);
+		EXPECT_EQ(iArrayOutput[i], iArrayInput[i]);
 }
 
 TEST(paritySortArray, case3)
 {
-	int iArray[5] = { 2,4,1,3,5 };
+	int iArrayInput[5] = { 2,4,1,3,5 };
 	int iArrayOutput[5] = { 5,3,1,4,2 };
 	int iLength = 5;
-	ARRAY::paritySortArray(iArray, iLength);
+	ARRAY::paritySortArray(iArrayInput, iLength);
 	for (int i = 0;i < iLength;i++)
-		EXPECT_EQ(iArrayOutput[i], iArray[i]);
+		EXPECT_EQ(iArrayOutput[i], iArrayInput[i]);
 }
 
 TEST(paritySortArray, case4)
 {
-	int iArray[5] = { 1,2,3,4,5 };
+	int iArrayInput[5] = { 1,2,3,4,5 };
 	int iArrayOutput[5] = { 1,5,3,4,2};
 	int iLength = 5;
-	ARRAY::paritySortArray(iArray, iLength);
+	ARRAY::paritySortArray(iArrayInput, iLength);
 	for (int i = 0;i < iLength;i++)
-		EXPECT_EQ(iArrayOutput[i], iArray[i]);
+		EXPECT_EQ(iArrayOutput[i], iArrayInput[i]);
 }
 
 TEST(paritySortArray, case5)
 {
-	int iArray[5] = { 2,4,1,3,5 };
+	int iArrayInput[5] = { 2,4,1,3,5 };
 	int iArrayOutput[5] = { 5,3,1,4,2 };
 	int iLength = 5;
-	ARRAY::paritySortArrayOpt1(iArray, iLength,ARRAY::isEven);
+	ARRAY::paritySortArrayOpt1(iArrayInput, iLength,ARRAY::isEven);
 	for (int i = 0;i < iLength;i++)
-		EXPECT_EQ(iArrayOutput[i], iArray[i]);
+		EXPECT_EQ(iArrayOutput[i], iArrayInput[i]);
 }
 
 void  test_array()

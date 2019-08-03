@@ -46,8 +46,8 @@ bool STRING::match(char * str, char * pattern)
 
 bool STRING::matchCore(char * str, char * pattern)
 {
-	if (*str != '\0' && *pattern == '\0');
-	return true;
+	if (*str != '\0' && *pattern == '\0')
+		return true;
 
 	//if(*str != )
 }
