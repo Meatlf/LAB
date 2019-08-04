@@ -92,6 +92,86 @@ void test_replace_blank()
 	free(stringReplaceTemp);
 }
 
+TEST(createNode, case0)
+{
+	std::cout << "创建链表：" << std::endl;
+	int iArrayOutput[5] = { 3,2,4,5};
+	int iLength = 4;
+	ListNode* pHeadNode = LISTNODE::createNode();
+	pHeadNode = pHeadNode->pNext;
+	for (int i = 0;i < iLength;i++)
+	{
+		EXPECT_EQ(pHeadNode->iVal, iArrayOutput[i]);
+		pHeadNode = pHeadNode->pNext;
+	}
+}
+
+TEST(KToLastNode, case0)
+{
+	int iArrayOutput[5] = { 3,2,4,5 };
+	int iLength = 4;
+	ListNode* pHeadNode = LISTNODE::createNodeWithoutHead();
+
+	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
+	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, 2);
+	EXPECT_EQ(pKToLastCurNode->iVal, 4);
+}
+
+TEST(KToLastNode, case1)
+{
+	int iArrayOutput[4] = { 3,2,4,5 };
+	int iLength = 4;
+	ListNode* pHeadNode = LISTNODE::createNodeWithoutHead();
+
+	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
+	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, 1);
+	EXPECT_EQ(pKToLastCurNode->iVal, 5);
+}
+
+TEST(KToLastNode, case2)
+{
+	int iArrayOutput[4] = { 3,2,4,5 };
+	int iLength = 4;
+	ListNode* pHeadNode = LISTNODE::createNodeWithoutHead();
+
+	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
+	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, 4);
+	EXPECT_EQ(pKToLastCurNode->iVal, 3);
+}
+
+TEST(KToLastNode, case3)
+{
+	int iArrayOutput[4] = { 3,2,4,5 };
+	int iLength = 4;
+	ListNode* pHeadNode = LISTNODE::createNode();
+
+	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
+	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, 5);
+	EXPECT_EQ(pKToLastCurNode->iVal, 0);
+}
+
+TEST(KToLastNode, case4)
+{
+	int iArrayOutput[4] = { 3,2,4,5 };
+	int iLength = 4;
+	ListNode* pHeadNode = LISTNODE::createNode();
+
+	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
+	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, -1);
+	EXPECT_EQ(pKToLastCurNode->iVal, 0);
+}
+
+TEST(KToLastNode, case5)
+{
+	ListNode* pHeadNode = NULL;
+
+	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
+	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, -1);
+	if (pKToLastCurNode == NULL)
+		std::cout << "Passed test!" << std::endl;
+	EXPECT_EQ(0, 0);
+}
+
 void test_link_list()
 {
 	ListNode* pHeadNode = LISTNODE::createNode();
@@ -113,6 +193,7 @@ void test_link_list()
 	LISTNODE::deleteNode(pHeadNode, iPosition);
 	LISTNODE::printNode(pHeadNode);
 	LISTNODE::printListReversely(pHeadNode);
+	LISTNODE::printNode(LISTNODE::pKToLastNode(pHeadNode, 3));
 }
 
 void test_recursion()
@@ -197,10 +278,10 @@ TEST(fun, case1)
 
 int main(int argc, char* argv[]) {
 	//test_replace_blank();
-	//test_link_list();
+	test_link_list();
 	//test_recursion();
 	//test_binary_tree();
-	test_array();
+	//test_array();
 	//test_stack();
 	//test_my_string();
 	testing::InitGoogleTest(&argc, argv);

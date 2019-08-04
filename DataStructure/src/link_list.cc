@@ -1,6 +1,6 @@
 #include<stack>
 #include"link_list.h"
-#define ARRAYSIZE  4
+#define ARRAYSIZE  3
 
 ListNode * LISTNODE::createNode()
 {
@@ -41,7 +41,7 @@ ListNode * LISTNODE::createNodeWithoutHead()
 	firstNode->iVal = 3;
 	firstNode->pNext = NULL;
 
-	int iArray[ARRAYSIZE] = { 1,2,3,4 };
+	int iArray[ARRAYSIZE] = { 2,4,5 };
 
 	for (int i = 0; i < ARRAYSIZE;i++)
 	{
@@ -264,4 +264,32 @@ void LISTNODE::deleteNode(ListNode * pNode, ListNode * pToBeDeletedNode)
 		pToBeDeletedNode->pNext = NULL;
 		return;
 	}
+}
+
+ListNode * LISTNODE::pKToLastNode(ListNode * pHeadNode, int k)
+{
+	ListNode* pFastNode = pHeadNode;
+	ListNode* pSlowNode = pHeadNode;
+
+	if (pHeadNode == NULL)
+		return pHeadNode;
+
+	if (k < 1)
+		return pHeadNode;
+
+	for (int i = k - 1;i > 0;--i)
+	{
+		pFastNode = pFastNode->pNext;
+	}
+
+	if (pFastNode->pNext == NULL)
+		return pHeadNode;
+
+	while (pFastNode->pNext != NULL)
+	{
+		pFastNode = pFastNode->pNext;
+		pSlowNode = pSlowNode->pNext;
+	}
+
+	return pSlowNode;
 }
