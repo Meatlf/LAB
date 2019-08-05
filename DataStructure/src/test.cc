@@ -113,7 +113,7 @@ TEST(KToLastNode, case0)
 	ListNode* pHeadNode = LISTNODE::createNodeWithoutHead();
 
 	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
-	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, 2);
+	ListNode* pKToLastCurNode = LISTNODE::kToLastNode(pHeadNode, 2);
 	EXPECT_EQ(pKToLastCurNode->iVal, 4);
 }
 
@@ -124,7 +124,7 @@ TEST(KToLastNode, case1)
 	ListNode* pHeadNode = LISTNODE::createNodeWithoutHead();
 
 	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
-	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, 1);
+	ListNode* pKToLastCurNode = LISTNODE::kToLastNode(pHeadNode, 1);
 	EXPECT_EQ(pKToLastCurNode->iVal, 5);
 }
 
@@ -135,7 +135,7 @@ TEST(KToLastNode, case2)
 	ListNode* pHeadNode = LISTNODE::createNodeWithoutHead();
 
 	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
-	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, 4);
+	ListNode* pKToLastCurNode = LISTNODE::kToLastNode(pHeadNode, 4);
 	EXPECT_EQ(pKToLastCurNode->iVal, 3);
 }
 
@@ -146,7 +146,7 @@ TEST(KToLastNode, case3)
 	ListNode* pHeadNode = LISTNODE::createNode();
 
 	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
-	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, 5);
+	ListNode* pKToLastCurNode = LISTNODE::kToLastNode(pHeadNode, 5);
 	EXPECT_EQ(pKToLastCurNode->iVal, 0);
 }
 
@@ -157,7 +157,7 @@ TEST(KToLastNode, case4)
 	ListNode* pHeadNode = LISTNODE::createNode();
 
 	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
-	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, -1);
+	ListNode* pKToLastCurNode = LISTNODE::kToLastNode(pHeadNode, -1);
 	EXPECT_EQ(pKToLastCurNode->iVal, 0);
 }
 
@@ -166,10 +166,44 @@ TEST(KToLastNode, case5)
 	ListNode* pHeadNode = NULL;
 
 	std::cout << "面22：链表中倒数第k个节点!" << std::endl;
-	ListNode* pKToLastCurNode = LISTNODE::pKToLastNode(pHeadNode, -1);
+	ListNode* pKToLastCurNode = LISTNODE::kToLastNode(pHeadNode, -1);
 	if (pKToLastCurNode == NULL)
 		std::cout << "Passed test!" << std::endl;
 	EXPECT_EQ(0, 0);
+}
+
+TEST(entryPointNode, case0)
+{
+	ListNode* pHeadNode = NULL;
+
+	std::cout << "面23：链表中环的入口节点!" << std::endl;
+	pHeadNode = LISTNODE::createNode();
+	ListNode* pEntryPointNode = LISTNODE::entryPointNode(pHeadNode);
+	if (pEntryPointNode == NULL)
+		std::cout << "Passed test!" << std::endl;
+	EXPECT_EQ(0, 0);
+}
+
+TEST(entryPointNode, case1)
+{
+	ListNode* pHeadNode = NULL;
+
+	std::cout << "面23：链表中环的入口节点!" << std::endl;
+	pHeadNode = LISTNODE::createNodeWithRing();
+	ListNode* pMeetPointNode = LISTNODE::meetPointNode(pHeadNode);
+	// 快慢指针在值为4的节点相遇，说明该链表有环
+	EXPECT_EQ(4, pMeetPointNode->iVal);
+}
+
+TEST(entryPointNode, case2)
+{
+	ListNode* pHeadNode = NULL;
+
+	std::cout << "面23：链表中环的入口节点!" << std::endl;
+	pHeadNode = LISTNODE::createNodeWithRing();
+	ListNode* pEntryPointNode = LISTNODE::entryPointNode(pHeadNode);
+	// 快慢指针在值为4的节点相遇，说明该链表有环
+	EXPECT_EQ(2, pEntryPointNode->iVal);
 }
 
 void test_link_list()
@@ -193,7 +227,7 @@ void test_link_list()
 	LISTNODE::deleteNode(pHeadNode, iPosition);
 	LISTNODE::printNode(pHeadNode);
 	LISTNODE::printListReversely(pHeadNode);
-	LISTNODE::printNode(LISTNODE::pKToLastNode(pHeadNode, 3));
+	LISTNODE::printNode(LISTNODE::kToLastNode(pHeadNode, 3));
 }
 
 void test_recursion()

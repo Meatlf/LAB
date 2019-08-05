@@ -16,6 +16,11 @@ namespace LISTNODE {
 	// 创建不带头节点的链表
 	ListNode* createNodeWithoutHead();
 
+	// 创建带有环的链表
+	//  3 -> 2 -> 4 ->5
+	//  其中2为环入口
+	ListNode* createNodeWithRing();
+
 	// 打印单向链表
 	void printNode(ListNode* pHeadNode);
 
@@ -74,5 +79,23 @@ namespace LISTNODE {
 	解题思路：
 		使用“快慢指针”的策略，这两个指针相距k-1个节点。
 	*/
-	ListNode* pKToLastNode(ListNode* pHeadNode, int k);
+	ListNode* kToLastNode(ListNode* pHeadNode, int k);
+
+	/*
+	面23：链表中环的入口节点
+	题目：如果一个链表中包含环，如何找出环的入口节点？
+	解题思路：
+		1）使用“快慢指针”的策略；
+		2）分解为两个解题要点，1是判断是否有环，2是如果有环，环的入口点在哪里。
+		3）Q：如何判断链表是否包含环？
+			A：快指针走2步，慢指针走1步，如果快指针追上了慢指针，则包含环。
+		4）Q：如何找出环的入口节点？
+			A：快节点先移动环中的节点数，当快慢节点再次相遇时，相遇的地址就是环的入口节点。
+		5）Q：如何确定环中节点的数目？
+			A：快慢指针相遇的地方一定在环中，可以从相遇的节点出发，一边移动一边计数，当再次回到这个节点时，就可以得到环中节点数了。
+	*/
+	ListNode* entryPointNode(ListNode* pHeadNode);
+
+	// 快慢指针相遇的节点
+	ListNode* meetPointNode(ListNode* pHeadNode);
 }

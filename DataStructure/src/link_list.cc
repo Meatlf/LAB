@@ -54,6 +54,42 @@ ListNode * LISTNODE::createNodeWithoutHead()
 	return firstNode;
 }
 
+ListNode * LISTNODE::createNodeWithRing()
+{
+	ListNode* pHeadNode = (ListNode*)malloc(sizeof(ListNode));
+	ListNode* pTailNode = pHeadNode;
+	ListNode* pRingEntryNode = (ListNode*)malloc(sizeof(ListNode));
+
+	if (NULL == pHeadNode)
+	{
+		std::cout << "ÄÚ´æ·ÖÅäÊ§°Ü£¡\n";
+		exit(EXIT_FAILURE);
+	}
+
+	pHeadNode->iVal = 0;
+	pHeadNode->pNext = NULL;
+
+	int iArrayNodeValue[5] = { 3,2,4,5,0 };
+	int i = 0;
+	for (;i < 5;i++)
+	{
+		if (iArrayNodeValue[i] == 0)
+			break;
+		ListNode* pNewNode = (ListNode*)malloc(sizeof(ListNode));
+		pNewNode->iVal = iArrayNodeValue[i];
+
+		if (pNewNode->iVal == 2)
+			pRingEntryNode = pNewNode;
+
+		pTailNode->pNext = pNewNode;
+		pTailNode = pTailNode->pNext;
+		pTailNode->pNext = NULL;
+	}
+	pTailNode->pNext = pRingEntryNode;
+	std::cout << std::endl;
+	return pHeadNode;
+}
+
 void LISTNODE::printNode(ListNode * pHeadNode)
 {
 	ListNode* pCurNode = pHeadNode->pNext;
@@ -266,7 +302,7 @@ void LISTNODE::deleteNode(ListNode * pNode, ListNode * pToBeDeletedNode)
 	}
 }
 
-ListNode * LISTNODE::pKToLastNode(ListNode * pHeadNode, int k)
+ListNode * LISTNODE::kToLastNode(ListNode * pHeadNode, int k)
 {
 	ListNode* pFastNode = pHeadNode;
 	ListNode* pSlowNode = pHeadNode;
@@ -292,4 +328,54 @@ ListNode * LISTNODE::pKToLastNode(ListNode * pHeadNode, int k)
 	}
 
 	return pSlowNode;
+}
+
+ListNode* LISTNODE::entryPointNode(ListNode * pHeadNode)
+{
+	ListNode* pMeetPointNode = meetPointNode(pHeadNode);
+	int num;
+
+	if (pMeetPointNode == NULL)
+		return NULL;
+	else
+	{
+		ListNode* pTestNumPointNode = pMeetPointNode->pNext;
+		num = 1;
+		while (pTestNumPointNode != pMeetPointNode)
+		{
+			pTestNumPointNode = pTestNumPointNode->pNext;
+			num++;
+		}
+
+	}
+
+	ListNode* pFastNode = pHeadNode;
+	ListNode* pSlowNode = pHeadNode;
+
+	for (int i = num;i > 0;--i)
+	{
+		pFastNode = pFastNode->pNext;
+	}
+
+	while (pFastNode != pSlowNode)
+	{
+		pFastNode = pFastNode->pNext;
+		pSlowNode = pSlowNode->pNext;
+	}
+	return pSlowNode;
+}
+
+ListNode * LISTNODE::meetPointNode(ListNode * pHeadNode)
+{
+	ListNode* pFastNode = pHeadNode;
+	ListNode* pSlowNode = pHeadNode;
+
+	while (pFastNode->pNext != NULL)
+	{
+		pFastNode = pFastNode->pNext->pNext;
+		pSlowNode = pSlowNode->pNext;
+		if (pFastNode == pSlowNode)
+			return pSlowNode;
+	}
+	return NULL;
 }
