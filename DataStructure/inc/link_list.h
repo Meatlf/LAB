@@ -98,4 +98,12 @@ namespace LISTNODE {
 
 	// 快慢指针相遇的节点
 	ListNode* meetPointNode(ListNode* pHeadNode);
+
+	/*
+	面24：反转链表
+	题目：定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。
+	解题思路：
+		1）使用3个指针来完成反转链表
+	*/
+	ListNode* reverseNode(ListNode* pHeadNode);
 }

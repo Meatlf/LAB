@@ -206,6 +206,38 @@ TEST(entryPointNode, case2)
 	EXPECT_EQ(2, pEntryPointNode->iVal);
 }
 
+TEST(reverseNode, case0)
+{
+	ListNode* pHeadNode = NULL;
+
+	std::cout << "面24：反转链表!" << std::endl;
+	pHeadNode = LISTNODE::createNode();
+	ListNode* pReversedHeadNode = LISTNODE::reverseNode(pHeadNode);
+	EXPECT_EQ(5, pReversedHeadNode->iVal);
+}
+
+TEST(reverseNode, case1)
+{
+	ListNode* pHeadNode = NULL;
+
+	std::cout << "面24：反转链表!" << std::endl;
+	ListNode* pReversedHeadNode = LISTNODE::reverseNode(pHeadNode);
+	if (pReversedHeadNode == NULL)
+		std::cout << "Passed test!" << std::endl;
+	EXPECT_EQ(0, 0);
+}
+
+TEST(reverseNode, case2)
+{
+	ListNode* pHeadNode = (ListNode*)malloc(sizeof(ListNode));
+	pHeadNode->iVal = 4;
+	pHeadNode->pNext = NULL;
+
+	std::cout << "面24：反转链表!" << std::endl;
+	ListNode* pReversedHeadNode = LISTNODE::reverseNode(pHeadNode);
+	EXPECT_EQ(4, pReversedHeadNode->iVal);
+}
+
 void test_link_list()
 {
 	ListNode* pHeadNode = LISTNODE::createNode();

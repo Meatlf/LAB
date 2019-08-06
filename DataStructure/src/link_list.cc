@@ -379,3 +379,23 @@ ListNode * LISTNODE::meetPointNode(ListNode * pHeadNode)
 	}
 	return NULL;
 }
+
+ListNode * LISTNODE::reverseNode(ListNode * pHeadNode)
+{
+	ListNode* pReversedHeadNode = NULL;	// 用于保存链表反转之后的头节点
+	ListNode* pCurNode = pHeadNode;
+	ListNode* pPreNode = NULL;
+
+	while (pCurNode != NULL)
+	{
+		ListNode* pNextNode = pCurNode->pNext;	// pNextNode节点在while循环内初始化
+
+		if (pNextNode == NULL)
+			pReversedHeadNode = pCurNode;
+		pCurNode->pNext = pPreNode;
+		pPreNode = pCurNode;
+		pCurNode = pNextNode;
+	}
+
+	return pReversedHeadNode;
+}
