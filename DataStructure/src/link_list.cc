@@ -399,3 +399,27 @@ ListNode * LISTNODE::reverseNode(ListNode * pHeadNode)
 
 	return pReversedHeadNode;
 }
+
+ListNode * LISTNODE::mergeNode(ListNode * pHeadNode0, ListNode * pHeadNode1)
+{
+	if (pHeadNode0 == NULL)
+		return pHeadNode1;
+	else if(pHeadNode1 == NULL)
+	{
+		return pHeadNode0;
+	}
+
+	ListNode* pMergedNode = (ListNode*)malloc(sizeof(ListNode));
+
+	if (pHeadNode0->pNext->iVal < pHeadNode1->pNext->iVal)
+	{
+		pMergedNode = pHeadNode0;
+		pMergedNode->pNext = mergeNode(pHeadNode0->pNext, pHeadNode1);
+	}
+	else
+	{
+		pMergedNode = pHeadNode1;
+		pMergedNode->pNext = mergeNode(pHeadNode0, pHeadNode1->pNext);
+	}
+	return pMergedNode;
+}
