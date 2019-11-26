@@ -45,6 +45,10 @@ void BINARYTREE::createBTree(BTNode *& b, char * str)
 	}
 }
 
+void BINARYTREE::createBTreeUsingRecursion(BTNode *& pBTNode)
+{
+}
+
 void BINARYTREE::destroyBTree(BTNode *& b)
 {
 	if (b != NULL)

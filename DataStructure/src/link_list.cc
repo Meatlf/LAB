@@ -219,9 +219,11 @@ void LISTNODE::printListReversely(ListNode * pHeadNode)
 		std::cout << pHeadNode->pNext->iVal << std::endl;
 	}
 
+	// 栈的定义
 	std::stack<ListNode*> stackList;
-	ListNode* pTempNode = pHeadNode->pNext;
 
+	// 链表里的所有元素入栈操作
+	ListNode* pTempNode = pHeadNode->pNext;
 	while (pTempNode != NULL)
 	{
 		stackList.push(pTempNode);
@@ -229,6 +231,7 @@ void LISTNODE::printListReversely(ListNode * pHeadNode)
 	}
 
 	std::cout << "Print list reversely!" << std::endl;
+	// 栈里的链表出栈操作
 	while (!stackList.empty())
 	{
 		std::cout << stackList.top()->iVal << " ";

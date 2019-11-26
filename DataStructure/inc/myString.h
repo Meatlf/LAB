@@ -24,7 +24,7 @@ namespace STRING
 
 	ÈÕÆÚ£º
 	2019-05-26
-	3019-07-02
+	2019-07-02
 	*/
 	int temp_string_length(const char* string, int length);
 	int replace_blank(const char* string, int length, int lengthTemp, char* replaceBlankString);

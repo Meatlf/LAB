@@ -2,47 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="660d9e26-84bc-4b72-917d-35863ff3de03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../net.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructure/GTest/define_function.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../DataStructure/GTest/define_function.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructure/GTest/link_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../DataStructure/GTest/link_list.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructure/GTest/main.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../../DataStructure/GTest/main.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructure/GTest/print_reverse_list.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructure/GTest/replace_blank.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructure/GTest/search.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../DataStructure/GTest/search.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../LogisticRegression.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Untitled.ipynb" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Python/ZeroPadding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/C++.sdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/C++.sdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../C++/C++.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../C++/C++.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataStructure/inc/binary_tree.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../DataStructure/inc/binary_tree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataStructure/inc/link_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../DataStructure/inc/link_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataStructure/inc/myString.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../DataStructure/inc/myString.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataStructure/src/binary_tree.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../../DataStructure/src/binary_tree.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataStructure/src/link_list.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../../DataStructure/src/link_list.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Python/NumPy.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Python/NumPy.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mnist_loader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#325#350#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/network.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-225">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -52,50 +27,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/mnist_loader.py" />
-        <option value="$PROJECT_DIR$/src/network.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
-  </component>
+  <component name="ProjectId" id="1RpgVzQSaoXTTnxo3X0SCiqhRlO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="neural-networks-and-deep-learning-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="neural-networks-and-deep-learning-master" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="neural-networks-and-deep-learning-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="neural-networks-and-deep-learning-master" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="neural-networks-and-deep-learning-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="neural-networks-and-deep-learning-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Python" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RunDashboard">
@@ -123,6 +60,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/mnist_loader.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -144,6 +82,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/network.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -170,48 +109,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1562151900468</updated>
+      <workItem from="1570369612893" duration="75000" />
     </task>
     <servers />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18843684" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3263158" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3290735" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.33793837" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32624868" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mnist_loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#325#350#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

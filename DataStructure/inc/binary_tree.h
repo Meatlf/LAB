@@ -13,8 +13,19 @@ struct BTNode
 
 namespace BINARYTREE
 {
-	// 创建二叉树
+	/*
+	创建二叉树
+	方法：使用括号表示法创建二叉树
+	缺点：具有规则，对编写相应的代码提出了较高的要求
+	*/
 	void createBTree(BTNode* &b, char* str);
+
+	/*
+	创建二叉树
+	方法：使用递归法创建二叉树
+	优点：代码足够简洁
+	*/
+	void createBTreeUsingRecursion(BTNode* &pBTNode);
 
 	// 销毁二叉树
 	void destroyBTree(BTNode* &b);
