@@ -1,14 +1,14 @@
-# References [numpy.pad](https://docs.scipy.org/doc/numpy/reference/generated/numpy.pad.html)
+import cv2
 import numpy as np
 
-def zero_pad(a):
-    X_pad = np.pad(a,(4,4),'constant',constant_values=(4,6))
-    return X_pad
+img = cv2.imread('j.png',0)
+kernel = np.ones((5,5),np.uint8)
+erosion=cv2.erode(img,kernel,iterations=1)
 
-def main():
-    a=[1,2,3,4,5]
-    print(zero_pad(a))
-    print("Hello World!")
 
-if __name__ == '__main__':
-    main()
+cv2.imshow("Image", img)
+cv2.waitKey(0)
+
+cv2.imshow("Dst", erosion)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
