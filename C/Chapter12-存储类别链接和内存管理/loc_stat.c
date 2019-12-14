@@ -1,3 +1,7 @@
+/*
+参考资料： C Primer Plus 第6章 12.1.6 块作用域的静态变量
+*/
+
 #include<stdio.h>
 void tryStatic(void);
 
