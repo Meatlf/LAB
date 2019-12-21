@@ -7,7 +7,7 @@ void help(char** argv ) {
 	<< "A simple OpenCV program that loads and displays an image from disk\n"
 	<< argv[0] <<" <path/filename>\n"
 	<< "For example:\n"
-	<< argv[0] << " ../data/input/fruits.jpg\n"
+	<< argv[1] << " ../data/input/fruits.jpg\n"
 	<< std::endl;
 }
 	
