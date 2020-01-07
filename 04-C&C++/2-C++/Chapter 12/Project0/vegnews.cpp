@@ -11,24 +11,32 @@ int main()
 {
     using std::endl;
     {
+        // 正常输出部分
+        // 对象headline1、headline2、sports属于同一类
         cout << "Starting an inner block.\n";
         StringBad headline1("Celery Stalks at Midnight");
         StringBad headline2("Lettuce Prey");
         StringBad sports("Spinach Leaves Bowl for Dollars");
-        cout << "headline1: " << headline1 << endl;
-        cout << "headline2: " << headline2 << endl;
-        cout << "sports: " << sports << endl;
+        cout << endl;
+        // cout << "headline1: " << headline1 << endl;
+        // cout << "headline2: " << headline2 << endl;
+        // cout << "sports: " << sports << endl;
+
         callme1(headline1);
         cout << "headline1: " << headline1 << endl;
-        callme2(headline2);
-        cout << "headline2: " << headline2 << endl;
+        cout << endl;
+
+        // callme2(headline2);
+        // cout << "headline2: " << headline2 << endl;
+        // cout << endl;
+
         cout << "Initialize one object to another:\n";
-        StringBad sailor = sports;
-        cout << "sailor: " << sailor << endl;
-        cout << "Assign one object to another:\n";
-        StringBad knot;
-        knot = headline1;
-        cout << "knot: " << knot << endl; 
+    //     StringBad sailor = sports;
+    //     cout << "sailor: " << sailor << endl;
+    //     cout << "Assign one object to another:\n";
+    //     StringBad knot;
+    //     knot = headline1;
+    //     cout << "knot: " << knot << endl; 
         cout << "Exiting the block.\n";
     }
     cout << "End of main()\n";
