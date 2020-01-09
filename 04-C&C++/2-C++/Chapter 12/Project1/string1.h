@@ -19,6 +19,7 @@ public:
     String();               // default constructor
     String(const String &); // copy constructor
     ~String();              // destructor
+    // 返回被存储的字符串的长度
     int length () const { return len; }
 // overloaded operator methods    
     String & operator=(const String &);
@@ -32,6 +33,7 @@ public:
     friend ostream & operator<<(ostream & os, const String & st);
     friend istream & operator>>(istream & is, String & st);
 // static function
+    // 补充静态类数据成员
     static int HowMany();
 };
 #endif

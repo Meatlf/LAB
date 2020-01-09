@@ -26,17 +26,18 @@ int main()
         cout << "headline1: " << headline1 << endl;
         cout << endl;
 
-        // callme2(headline2);
-        // cout << "headline2: " << headline2 << endl;
-        // cout << endl;
+        callme2(headline2);     // 此处调用了复制构造函数
+        cout << "headline2: " << headline2 << endl;
+        cout << endl;
 
         cout << "Initialize one object to another:\n";
-    //     StringBad sailor = sports;
-    //     cout << "sailor: " << sailor << endl;
-    //     cout << "Assign one object to another:\n";
-    //     StringBad knot;
-    //     knot = headline1;
-    //     cout << "knot: " << knot << endl; 
+        // 此处调用了复制构造函数
+        StringBad sailor = sports;  
+        cout << "sailor: " << sailor << endl;
+        cout << "Assign one object to another:\n";
+        StringBad knot;
+        knot = headline1;               // 赋值构造函数
+        cout << "knot: " << knot << endl; 
         cout << "Exiting the block.\n";
     }
     cout << "End of main()\n";
