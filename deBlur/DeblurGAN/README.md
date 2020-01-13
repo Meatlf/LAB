@@ -67,11 +67,13 @@ Code borrows heavily from [pix2pix](https://github.com/junyanz/pytorch-CycleGAN-
 
 ***
 
-**具体安装命令**：
+**具体安装命令**
 
-```sh
-python test.py --dataroot ./blurred_sharp/ --model test --dataset_mode single --learn_residual
+```shell
+sh run.sh
 ```
+
+会遇到如下几个问题，这里均给出了解决方法。
 
 Q：
 
@@ -88,4 +90,23 @@ Q：
 ModuleNotFoundError: No module named 'dominate'
 ```
 
-A：在Anaconda Navigator中安装dominate包.
+A：
+```shell
+conda install -c conda-forge dominate
+```
+
+Q:
+```shell
+ImportError: cannot import name 'SSIM' from 'ssim' 
+```
+A:需要参考[cannot import name 'SSIM' #9](https://github.com/KupynOrest/DeblurGAN/issues/9)中qinghua2016的回答。
+**Q**：如何解决没有visdom包的错误？
+
+**A**：
+
+```shell
+python3 -m pip install visdom
+```
+
+
+
