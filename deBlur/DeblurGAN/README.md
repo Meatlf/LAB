@@ -108,5 +108,17 @@ A:需要参考[cannot import name 'SSIM' #9](https://github.com/KupynOrest/Deblu
 python3 -m pip install visdom
 ```
 
+Q：如何解决关于argument的问题？
+
+```shell
+ModuleNotFoundError: No module named 'argument'
+```
+
+A：
+
+```
+sudo python3 -m pip install argument
+```
+
 
 
