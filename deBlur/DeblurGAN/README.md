@@ -79,9 +79,13 @@ Q：
 ImportError: cannot import name 'PILLOW_VERSION' from 'PIL' (/home/ttz/anaconda3/lib/python3.7/site-packages/PIL/__init__.py)
 ```
 
-A：
+A：在Anaconda Navigator中将pillow版本由7.0降到6.2.1.
 
-```
-conda install pillow
+Q：
+
+```shell
+   import dominate
+ModuleNotFoundError: No module named 'dominate'
 ```
 
+A：在Anaconda Navigator中安装dominate包.
