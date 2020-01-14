@@ -46,7 +46,7 @@ python train.py --dataroot /.path_to_your_data --learn_residual --resize_or_crop
 
 [Keras Repository](https://github.com/RaphaelMeudec/deblur-gan)
 
-
+ls
 
 ## Citation
 
@@ -121,4 +121,8 @@ sudo python3 -m pip install argument
 ```
 
 
+
+## 参考资料
+
+[1] [CycleGAN与pix2pix不得不玩的模型](https://blog.csdn.net/Gavinmiaoc/article/details/80585531?utm_source=blogxgwz8)
 
