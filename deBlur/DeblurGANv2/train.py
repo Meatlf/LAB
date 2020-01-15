@@ -168,7 +168,7 @@ class Trainer:
 
 
 if __name__ == '__main__':
-    with open('config/config.yaml', 'r') as f:
+    with open('./config/config.yaml', 'r') as f:
         config = yaml.load(f)
 
     batch_size = config.pop('batch_size')
