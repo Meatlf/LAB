@@ -120,6 +120,10 @@ A：
 sudo python3 -m pip install argument
 ```
 
+声明:该项目需要VGG19网络，可以手动从如下链接手动下载到相应位置。
+```
+Downloading: "https://download.pytorch.org/models/vgg19-dcbb9e9d.pth" to /home/ttz/.cache/torch/checkpoints/vgg19-dcbb9e9d.pth
+```
 
 
 ## 参考资料

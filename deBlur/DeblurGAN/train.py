@@ -56,7 +56,7 @@ if __name__ == '__main__':
 
 	opt = TrainOptions().parse()
 	# opt.dataroot = 'D:\Photos\TrainingData\BlurredSharp\combined'
-	opt.dataroot = '/home/ttz/Documents/LAB/deBlur/DeblurGAN/datasets/'
+	opt.dataroot = '/home/syno/Documents/LAB/deBlur/DeblurGAN/datasets/'
 	opt.learn_residual = True
 	opt.resize_or_crop = "crop"
 	opt.fineSize = 256
