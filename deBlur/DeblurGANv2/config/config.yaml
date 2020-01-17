@@ -3,8 +3,8 @@ project: deblur_gan
 experiment_desc: fpn
 
 train:
-  files_a: &FILES_A ./datasets/*.jpg
-  files_b: *FILES_A
+  files_a: ./datasets/train/A/*.jpg
+  files_b: ./datasets/train/B/*.jpg
   size: &SIZE 256
   crop: random
   preload: &PRELOAD false
@@ -28,8 +28,8 @@ train:
     - name: sharpen
 
 val:
-  files_a: *FILES_A
-  files_b: *FILES_A
+  files_a: ./datasets/val/A/*.jpg
+  files_b: ./datasets/val/B/*.jpg
   size: *SIZE
   scope: geometric
   crop: center
