@@ -251,3 +251,11 @@ ModelManifest.xml
 *.png
 *.bmp
 *.jpg
+
+*.pyc
+
+*.bin
+
+*.pth.tar
+
+*.tfevents*
