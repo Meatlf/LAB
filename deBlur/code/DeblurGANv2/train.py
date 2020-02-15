@@ -25,9 +25,9 @@ class Trainer:
         self.config = config
         self.train_dataset = train
         self.val_dataset = val
-        self.adv_lambda = config['model']['adv_lambda']
+        self.adv_lambda = config['model']['adv_lambda']     // 0.001
         self.metric_counter = MetricCounter(config['experiment_desc'])
-        self.warmup_epochs = config['warmup_num']
+        self.warmup_epochs = config['warmup_num']           // 3
 
     def train(self):
         self._init_params()
