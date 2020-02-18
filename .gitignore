@@ -251,3 +251,9 @@ ModelManifest.xml
 *.png
 *.bmp
 *.jpg
+
+*.h5
+
+events.*
+*.pth.tar
+*.DS_Store

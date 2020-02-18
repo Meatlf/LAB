@@ -41,7 +41,7 @@ val:
 phase: train
 warmup_num: 3
 model:
-  g_name: fpn_inception
+  g_name: fpn_mobilenet
   blocks: 9
   d_name: double_gan # may be no_gan, patch_gan, double_gan, multi_scale
   d_layers: 3
