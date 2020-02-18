@@ -252,6 +252,8 @@ ModelManifest.xml
 *.bmp
 *.jpg
 
+*.pth
+
 <<<<<<< HEAD
 *.h5
 
