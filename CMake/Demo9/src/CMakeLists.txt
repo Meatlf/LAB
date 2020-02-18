@@ -1,3 +1,0 @@
-PROJECT(HELLLO) 
-ADD_EXECUTABLE(Demo main.cc)
-
