@@ -252,6 +252,15 @@ ModelManifest.xml
 *.bmp
 *.jpg
 
+*.pth
+
+<<<<<<< HEAD
+*.h5
+
+events.*
+*.pth.tar
+*.DS_Store
+=======
 *.pyc
 
 *.bin
@@ -259,3 +268,4 @@ ModelManifest.xml
 *.pth.tar
 
 *.tfevents*
+>>>>>>> bf14c36b70035a0b7e250fd088e2e1a35d0d2b0d
